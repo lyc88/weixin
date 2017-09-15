@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/address_choose.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script src="../js/src/vue.js"></script>
+    <script src="../js/src/jquery.cookie.js"></script>
+    <script src="../js/src/vue-resource.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>选择收货地址</title>
+</head>
+<body>
+<div class="sec">
+    <header>
+        <i class="iconfont icon-llmainpageback"  @click="back"></i>
+        <span>选择收货地址</span>
+        <em>编辑</em>
+    </header>
+    <section>
+        <div v-for="(i,index) in  userAddress" class="all">
+            <div class="left">
+                <div class="top">
+                    <span>{{i.receiver}}</span>
+                    <i>{{i.aliasAddr}}</i>
+                    <div class="phone"> {{i.mobile}}</div>
+                </div>
+                <div class="bottom"><p>{{i.subAdds}}</p></div>
+            </div>
+            <div class="right">
+                <em>
+                    <i class="iconfont icon-gou1"></i>
+                </em>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+
+
+    <script type="text/javascript">
+        $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+        /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
+    <script src="./js/address_choose.js"></script>
+</body>
+</html>

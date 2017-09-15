@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/pay_succeed.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>支付成功</title>
+</head>
+<body>
+  <header>
+    <i class="iconfont icon-llmainpageback"></i>
+    <h2>支付中心</h2>
+</header>
+  <div class="gray"></div>
+  <article>
+      <div class="orderNumber">
+          <p>您购买的商品订单号：389595490343943已经支付成功，请耐心等待收货；</p>
+      </div>
+      <div class="user">
+           收货人：张三 &nbsp;13746925467
+      </div>
+      <div class="address">收货地址：广东省深圳市南山区高新园大冲商务中心D座1308</div>
+      <div class="btn">
+          <a href="javascript:void (0)" class="btn-left">查看订单详情</a>
+          <a href="javascript:void (0)" class="btn-right">返回首页</a>
+      </div>
+  </article>
+  <script type="text/javascript">
+      $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+      /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+      /*．．．*/
+      $youziku.draw();
+  </script>
+<script src="./js/pay_succeed.js"></script>
+</body>
+</html>

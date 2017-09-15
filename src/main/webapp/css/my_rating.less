@@ -1,0 +1,222 @@
+@charset "utf-8";
+@rem:100rem;
+@3c:#3c3c3c;
+/*::-webkit-scrollbar {width: 0;height: 0;}*/
+body{background: #f3f3f3}
+header,section .touxiang,section .message{
+  background: #fff;
+}
+header{
+  position: relative;
+  height: 96/@rem;
+  line-height: 96/@rem;
+  padding: 0 14/@rem;
+  color: @3c;
+  font-size: 36/@rem;
+  text-align: center;
+  border-bottom: 1/@rem solid #ebebeb;;
+  z-index: 70;
+}
+header  .icon-llmainpageback{
+  color: @3c;
+  position: absolute;
+  left: 14/@rem;
+  font-size: 30/@rem;
+}
+header .icon-gengduo{
+  color: @3c;
+  position: absolute;
+  right: 14/@rem;
+  font-size: 30/@rem;
+}
+.go_rating{
+  position: relative;
+  height: 80/@rem;
+  padding: 0 14/@rem;
+  width: 100%;
+  font-size: 0;
+  background: #fff;
+  margin-bottom: 20/@rem;
+}
+.go_rating .my{
+  display: inline-block;
+  height: 48/@rem;
+  line-height: 48/@rem;
+  position: absolute;
+  left: 14/@rem;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: 0;
+}
+.go_rating .my img:first-of-type{
+  display: inline-block;
+  width: 48/@rem;
+  vertical-align: middle;
+  margin-top: -16/@rem;
+}
+.go_rating .my img:last-of-type{
+  display: inline-block;
+  width: 20/@rem;
+}
+.go_rating .my span {
+  display: inline-block;
+  margin: 0 20/@rem;
+  font-size: 24/@rem;
+  height: 48/@rem;
+  line-height: 48/@rem;
+
+}
+.go_rating  .rating{
+  position: absolute;
+  right: 14/@rem;
+  top:50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  height: 40/@rem;
+  line-height: 40/@rem;
+  text-align: center;
+  width: 116/@rem;
+  border: 1/@rem solid #ea0000;
+  color: #ea0000;
+  font-size: 24/@rem;
+}
+section{
+  margin-bottom: 224/@rem;
+}
+nav{
+  width: 100%;
+  padding: 0 14/@rem;
+  display: flex;
+  background: #fff;
+  height: auto;
+}
+nav a{
+  flex: 1;
+  text-align: center;
+  height: 80/@rem;
+  line-height: 80/@rem;
+  font-size: 28/@rem;
+  color: @3c;
+  border-bottom: 1/@rem solid #adadad;
+}
+nav .active{
+  color: #ea0000;
+  border-bottom: 4/@rem solid #ea0000;
+}
+.all_rating{
+  width: 100%;
+  padding: 0 14/@rem;
+  height: auto;
+  background: #fff;
+  margin-bottom: 20/@rem;
+}
+.all_rating .one_rating{
+  height: auto;
+  width: 100%;
+
+}
+.all_rating .one_rating .user_rating{
+  position: relative;
+  height: 88/@rem;
+  width: 100%;
+}
+.all_rating .one_rating .user_rating .user_left{
+  position: absolute;
+  left: 0;
+  top:50%;
+  transform: translateY(-50%);
+  height: auto;
+}
+.all_rating .one_rating .user_rating .user_left .user_img{
+  display: inline-block;
+}
+.all_rating .one_rating .user_rating .user_left .user_img img{
+  height: 48/@rem;
+  width: 48/@rem;
+  margin-right: 10/@rem;
+}
+.all_rating .one_rating .user_rating .user_left .user_mes{
+  display: inline-block;
+}
+.all_rating .one_rating .user_rating .user_left .user_mes p{
+  font-size: 24/@rem;
+  color: @3c;
+}
+.all_rating .one_rating .user_rating .user_left .user_mes>div{
+  font-size: 0/@rem;
+
+}
+.all_rating .one_rating .user_rating .user_left .user_mes>div span {
+  color: @3c;
+  font-size: 24/@rem;
+  margin-right: 10/@rem
+}
+.all_rating .one_rating .user_rating .user_left .user_mes>div img{
+  width: 20/@rem;
+  display: inline-block;
+  margin-right: 4/@rem
+}
+.all_rating .one_rating .user_rating time{
+  position: absolute;
+  right: 0;
+  top:50%;
+  transform: translateY(-50%);
+  height: auto;
+  font-size: 20/@rem;
+  color: #adadad;
+}
+.all_rating .one_rating>p{
+  font-size: 24/@rem;
+  color: @3c;
+  margin-bottom: 20/@rem;
+}
+.all_rating .one_rating .rating_img{
+  width: 100%;
+  height: auto;
+  font-size: 0;
+}
+.all_rating .one_rating .rating_img li{
+  display: inline-block;
+  width: 31%;
+  margin-right: 2.33%;
+  margin-bottom: 20/@rem;
+  overflow: hidden;
+}
+.all_rating .one_rating .rating_img img{
+  display: inline-block;
+  width: 100%;
+  margin-right: 2.33%;
+  overflow: hidden;
+}
+.shop{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+.shop .shop_mes{
+  width: 100%;
+  padding: 20/@rem 14/@rem;
+  height: 184/@rem;
+  margin-bottom: 40/@rem;
+}
+.shop .shop_mes img{
+  width: 144/@rem;
+  height: 144/@rem;
+  float: left;
+  margin-right: 20/@rem;
+}
+.shop .shop_mes>div{
+  height: 144/@rem;
+}
+.shop .shop_mes>div h4{
+  font-weight: normal;
+  font-size: 28/@rem;
+  color:@3c;
+  height: 100/@rem;
+}
+.shop .shop_mes>div span{
+  font-size: 28/@rem;
+  color:#ea0000;
+}

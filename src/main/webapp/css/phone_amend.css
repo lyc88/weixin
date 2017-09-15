@@ -1,0 +1,186 @@
+@charset "utf-8";
+body {
+  background: #f3f3f3;
+}
+header,
+section .touxiang,
+section .message {
+  background: #fff;
+}
+header {
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding: 0 0.14rem;
+  color: #3c3c3c;
+  font-size: 0.36rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+header .iconfont {
+  color: #3c3c3c;
+  font-size: 0.3rem;
+  position: absolute;
+  left: 0.14rem;
+}
+section input {
+  display: block;
+  width: 100%;
+  height: 0.8rem;
+  font-size: 0.28rem;
+  color: #adadad;
+  padding: 0 0.14rem;
+  border: 0;
+  outline: 0;
+}
+section a {
+  display: block;
+  margin: 0 auto;
+  width: 96%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.32rem;
+  color: #fff;
+  text-align: center;
+  background: #ea0000;
+}
+#register{
+}
+#register p{
+  margin-top: 0.4rem;  
+  margin-left: 2%;
+  font-size: 0.3rem;
+}
+#register .registerPlace{
+  margin-top: 0.2rem;
+}
+#register .registerPlace .CaptchaPlace{
+  display:flex;
+  padding: 0 2%;
+}
+#CAPTCHA{
+  vertical-align:bottom;
+  margin: 0 2% 0 0;
+  width: 96%;
+
+}
+#getSecond{
+  color:red;
+}
+
+#bindYourNum{
+  vertical-align:bottom;
+  
+}
+
+#bindYourNum.disAble{
+  background-color: #adadad;
+}
+
+#sureForRegis{
+  display:inline-block;
+  margin-top: ;
+  display: block;
+  margin: 0.4rem auto;
+  width: 96%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.32rem;
+  color: #fff;
+  text-align: center;
+  background: #ea0000;
+}
+.passwordPlace{
+    margin-top: 0.2rem;
+}
+.passwordPlace #pWd{
+
+  width: 96%;
+  margin: 0 auto;
+}
+#mask {     
+            width: 2.5rem;
+            height: 0.6rem;
+            border-radius:0.1rem;    
+            position: absolute;
+            top: 30%;
+            background-color: black;     
+            z-index: 1002; 
+            left: 50%; 
+            margin-left: -1.25rem;
+            text-align:center;
+            line-height: 0.6rem;
+            margin-top: -.6rem;    
+            opacity:0.5; -moz-opacity:0.5;     
+            display:none;
+            color:#fff;
+      }
+ #maskOfBindLogin{
+   display:none;
+   position:fixed;
+   top:0;
+   left:0;
+   height:100%;
+   width: 100%;
+   background-color:rgba(0,0,0,0.3);
+   
+ }
+ #closeMask{
+   position:absolute;
+   top:3px;
+   right:3px;
+ }
+ #maskOfBindLogin.active{
+   display:block;
+ }
+ #maskOfBindLogin #bindLogin{
+   color:#999;
+   border-radius:3px;
+   padding:0.32rem 0.17rem 0.32rem 0.17rem;
+   background-color: #f3f3f3;
+   width: 90%;
+   position:absolute;
+   top:30%;
+   left:50%;
+   transform:translateX(-50%)
+ }
+ #bindLogin h3{
+   text-align:center;
+   font-weight:300;
+   color:#ea0000;
+   font-size: 0.36rem;
+   
+ }
+ #bindLogin>#describeInfo{
+   padding: 0.26rem 0;
+   border-bottom:1px solid #d3d3d3;
+ }
+ #bindLogin>#describeInfo p{
+   font-size: 0.25rem;
+   line-height: 0.38rem;
+ }
+.hidenInput{
+  display:none;
+}
+#toOtherLink {
+  display:flex;
+  justify-content:space-between;
+}
+#toOtherLink button{
+  color:#999;  
+  margin-top: 15px;
+  width: 45%;
+  height:0.6rem;
+  display:inline-block;
+  border:1px solid  #d3d3d3;
+  background-color: #f3f3f3;
+  border-radius:3px;
+}
+button#toBind{
+  color:#fff;
+  background-color: #ea0000;
+  border:1px solid #ea0000; 
+}
+#mobileNum.active{
+  border:1px solid #ea0000;
+}

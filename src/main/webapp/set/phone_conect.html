@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/phone_amend.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script src="../js/src/jquery.cookie.js"></script>
+    <script src="../js/src/auth.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>关联手机号</title>
+</head>
+<body>
+    <header>
+    <i id="goBack" class="iconfont icon-llmainpageback"></i>
+    <span >绑定原有账号</span>
+</header>
+    <form id="registerForm">
+
+    <section class="container">
+    <input type="text" required placeholder="请输入泰润商城账号" id="mobileNum" name="mobile">
+    
+</section>
+
+<div id="register">
+    <!--<p>验证码已发送到您的手机! <span id="getSecond">60</span>s后可重新获取</p>-->
+    <!--<p>请输入您所收到的验证码</p>-->
+    <section class="registerPlace">
+        <div class="passwordPlace">
+            <input type="password" required placeholder="请输入密码" id="pWd" name="password">
+        </div>
+        <input type="button" id="sureForRegis" value="绑定并登陆">
+        <input type="text" name="type" value="weixin" class="hidenInput">
+        <!--需要传入openId-->
+        <input type="text" name="openId" value="oDoUJ1T7gX5EzBYgqpI6oqe7j9Ao" class="hidenInput">
+        
+    </section>
+    
+</div>
+</form>
+
+</body>
+<script type="text/javascript">
+    //字体库
+    $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+    $youziku.draw();
+</script>
+<script>
+    $(function(){
+        $('#goBack').click(function(){
+            window.history.go(-1)
+        })
+        $('#sureForRegis').click(function(){
+            var dataInfo = $('#registerForm').serialize()
+            $.ajax({
+                type: "post",
+                dataType: "Json",
+                url: 'http://song.85nv.cn/mobile/user/loginBing',
+                data: dataInfo,
+                success:function(data){
+                    $('#mask').text(data.message)
+                    $('#mask').fadeIn(1000).fadeOut(1000)
+                }
+        })
+        return false;
+    })
+    })
+</script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/my_rating.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/vue.js"></script>
+    <script src="../js/src/vue-resource.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>我的评价</title>
+</head>
+<body>
+    <div class="sec">
+        <header>
+            <i class="iconfont icon-llmainpageback"></i>
+            <span>我的评价</span>
+            <i class="iconfont icon-gengduo"></i>
+        </header>
+        <section>
+            <div class="go_rating">
+                <div class="my">
+                    <img src="../images/head.png" alt="">
+                    <span>泰****st</span>
+                    <img src="../images/evaluation_ic_grade.png" alt="">
+                </div>
+                <div class="rating">
+                    去评价
+                </div>
+            </div>
+            <nav>
+                <a href="javascript:void (0)" :class="{'active': on_this==1}" @click="on_this=1">全部评价</a>
+                <a href="javascript:void (0)" :class="{'active': on_this==2}" @click="on_this=2">有图评价</a>
+            </nav>
+            <div class="all_rating">
+                <div class="one_rating">
+                    <div class="user_rating">
+                        <div class="user_left">
+                            <div class="user_img">
+                                <img src="../images/head.png" alt="">
+                            </div>
+                            <div class="user_mes">
+                                <p>泰****001</p>
+                                <div>
+                                    <span>评分</span>
+                                    <img src="../images/star_red.png" alt="">
+                                    <img src="../images/star_red.png" alt="">
+                                    <img src="../images/star_red.png" alt="">
+                                    <img src="../images/star_red.png" alt="">
+                                    <img src="../images/star_white.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <time>04-30</time>
+                    </div>
+                    <p>评价晚了，产品真不错，我是敏感皮肤，有次在实体店试用了一下还不错，就在网上查了一下，便宜十多块么！就拍下了。很好用，现在冬季皮肤容易干，
+                        喷下很不错，送的护手霜和唇膏，喜欢的赶紧下单吧</p>
+                    <div class="rating_img">
+                        <ul>
+                            <li> <img src="../images/touxiang.png" alt=""></li>
+                            <li> <img src="../images/touxiang.png" alt=""></li>
+                            <li> <img src="../images/touxiang.png" alt=""></li>
+                            <li> <img src="../images/touxiang.png" alt=""></li>
+                            <li> <img src="../images/touxiang.png" alt=""></li>
+                            <li> <img src="../images/touxiang.png" alt=""></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="shop">
+                <div class="shop_mes">
+                    <img src="../images/touxiang.png" alt="">
+                    <div class="">
+                        <h4>点睡阿达打打打打打萨达打打撒打算打打萨达撒</h4>
+                        <span>￥66.50</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script type="text/javascript">
+        $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+        /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
+    <script src="./js/my_rating.js"></script>
+</body>
+</html>

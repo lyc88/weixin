@@ -1,0 +1,578 @@
+@charset "utf-8";
+/*::-webkit-scrollbar {width: 0;height: 0;}*/
+.header-container {
+  width: 100%;
+  height: 0.96rem;
+}
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0.96rem;
+  background: #ea0000;
+  z-index: 9999;
+  overflow: visible;
+}
+header .icon-left img {
+  width: 0.3rem;
+  height: 0.3rem;
+}
+header .icon-right i {
+  font-size: 0.5rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header .icon-left {
+  display: block;
+  text-align: center;
+  float: left;
+  width: 0.4rem;
+  height: 100%;
+  vertical-align: middle;
+}
+header .icon-right {
+  display: block;
+  text-align: center;
+  float: right;
+  width: 0.7rem;
+  height: 100%;
+  position: relative;
+}
+header .icon-left span,
+header .icon-right span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+header .centre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 5rem;
+  height: 100%;
+}
+.refresh_none {
+  width: 100%;
+  height: 0.96rem;
+}
+.refresh_top {
+  position: relative;
+  background: url('../images/fox_black.png');
+  width: 100%;
+  height: 0.96rem;
+  background-size: 100% 100%;
+  display: none;
+}
+.refresh_top img {
+  width: 1.2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0.2rem;
+}
+.input1 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 0.54rem;
+  background: rgba(253, 230, 230, 0.9);
+  border-radius: 18px;
+}
+.window_warp {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.input1 i {
+  position: absolute;
+  width: 0.2rem;
+  height: 0.23rem;
+  background-size: 100% 100%;
+  top: 50%;
+  left: 0.2rem;
+  transform: translateY(-65%);
+  color: #adadad;
+  font-size: 0.28rem;
+  z-index: 999;
+}
+header input::-webkit-input-placeholder {
+  color: #ADADAD;
+}
+header input:-moz-placeholder {
+  color: #ADADAD;
+}
+header input::-moz-placeholder {
+  color: #ADADAD;
+}
+header input:-ms-input-placeholder {
+  color: #ADADAD;
+}
+header input {
+  width: 100%;
+  height: 100%;
+  display: block;
+  float: left;
+  border: 0;
+  outline: 0;
+  background: #fff;
+  opacity: 0.4;
+  color: #ADADAD;
+  padding-left: 0.6rem;
+  font-size: 0.24rem;
+  letter-spacing: 0.01rem;
+  border-radius: 18px;
+}
+/*轮播图*/
+.banner {
+  width: 100%;
+  height: 3rem;
+  background: #eaeaea url('../images/banner_ic_logo.png') no-repeat;
+  background-size: 30%;
+  background-position: 50%;
+}
+.banner-all {
+  background: #eaeaea url('../images/banner_ic_logo.png') no-repeat;
+  background-size: 30%;
+}
+.banner-h {
+  height: 100%;
+  width: 100%;
+}
+.banner-h img {
+  width: 100%;
+  height: 3rem;
+  background-size: cover;
+}
+/*导航选项*/
+nav {
+  display: flex;
+}
+nav a {
+  flex: 1;
+  text-align: center;
+  padding: 0.2rem 0 0.2rem 0;
+}
+nav a img {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+nav a p {
+  color: #3c3c3c ;
+  margin-top: 0.1rem;
+  font-size: 0.24rem;
+  font-weight: 600;
+}
+/*商品*/
+.shop {
+  width: 100%;
+  overflow: hidden;
+  background: #F3F3F3;
+  margin-bottom: 0.96rem;
+}
+.shop-rank,
+.shop-day {
+  width: 100%;
+  overflow: hidden;
+}
+.shop-tltle {
+  width: 100%;
+  height: 1.18rem;
+}
+.shops {
+  position: relative;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 0.6rem;
+  overflow: hidden;
+  text-align: center;
+}
+.shopping-tltle {
+  display: inline-block;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+}
+.shopping-tltle .p-left {
+  padding-left: 0.2rem;
+}
+.shopping-tltle .p-right {
+  padding-right: 0.2rem;
+}
+.shopping-tltle > div {
+  float: left;
+  height: 100%;
+}
+.shopping-tltle .span-color {
+  display: block;
+  float: left;
+  width: 0.06rem;
+  height: 0.06rem;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.shopping-tltle > div i {
+  display: block;
+  float: left;
+  height: 0.02rem;
+  width: 1.08rem;
+  position: relative;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.shopping-tltle .i-red {
+  background: #ea0000;
+}
+.shopping-tltle .i-blue {
+  background: #4eafeb;
+}
+.shopping-tltle .i-org {
+  background: #fd9028;
+}
+.shopping-tltle .span-red {
+  background: #ea0000;
+}
+.shopping-tltle .span-blue {
+  background: #4eafeb;
+}
+.shopping-tltle em {
+  font-style: normal;
+}
+.shopping-tltle .red {
+  color: #ea0000;
+  font-size: 0.36rem;
+}
+.shopping-tltle .blue {
+  color: #4eafeb;
+  font-size: 0.36rem;
+}
+.shopping-tltle .org {
+  color: #fd9028;
+  font-size: 0.36rem;
+}
+.shopping-tltle .black {
+  color: #3c3c3c;
+  font-size: 0.32rem;
+  margin-right: 0.2rem;
+}
+.shopping-tltle p {
+  font-size: 0.2rem;
+  color: #3c3c3c;
+}
+/*横向滚动条*/
+/*排行，滚动*/
+.rank-disable {
+  margin-top: -0.24rem;
+  height: 2.49rem;
+  overflow: hidden;
+}
+.rank-contect {
+  width: 100%;
+  height: 2.49rem;
+  margin-top: 0.3rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.rank-contect ul {
+  height: 100%;
+  margin-left: 0.08rem;
+}
+.rank-contect li {
+  display: inline-block;
+  position: relative;
+  height: 2.49rem;
+  width: 1.64rem;
+  background: #fff;
+  margin-right: 0.08rem;
+  text-align: center;
+}
+.rank-contect li .small-icon {
+  position: absolute;
+  width: 0.6rem;
+  height: 0.6rem;
+  top: 0.06rem;
+  left: 0.06rem;
+}
+.rank-contect li .big-img {
+  width: 1.64rem;
+  height: 1.8rem;
+}
+.rank-contect li p {
+  color: #ea0000;
+  font-size: 0.2rem;
+  padding-top: 0.06rem;
+}
+/*天天，滚动*/
+.day-disable {
+  margin-top: -0.28rem;
+  height: 3.2rem;
+  overflow: hidden;
+  margin-bottom: 0.2rem;
+}
+.day-contect {
+  width: 100%;
+  height: 3.3rem;
+  margin-top: 0.3rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.day-contect ul {
+  height: 100%;
+  margin-left: 0.14rem;
+}
+.day-contect li {
+  display: inline-block;
+  position: relative;
+  height: 3.2rem;
+  width: 1.96rem;
+  background: #fff;
+  margin-right: 0.1rem;
+  text-align: center;
+}
+.day-contect li .small-icon {
+  position: absolute;
+  width: 0.3rem;
+  height: 0.3rem;
+  top: 0.06rem;
+  left: 0;
+}
+.day-contect li .big-img {
+  width: 100%;
+  height: 2.2rem;
+}
+.day-contect li p {
+  padding: 0.2rem 0.06rem;
+}
+.day-contect li em {
+  float: left;
+  color: #ea0000;
+  font-size: 0.2rem;
+  font-style: normal;
+}
+.day-contect li i {
+  float: right;
+  color: #3c3c3c;
+  font-size: 0.2rem;
+  font-style: normal;
+  text-decoration: line-through;
+}
+.banner_all {
+  width: 100%;
+  height: 2rem;
+  background: #eaeaea url(../images/banner_ic_logo.png) no-repeat;
+  background-size: 30%;
+  background-position: 50%;
+}
+.banner-B {
+  width: 100%;
+  height: 100%;
+}
+.live-contect {
+  width: 100%;
+  padding: 0 0.14rem;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+.live-banner {
+  width: 100%;
+  height: 2.97rem;
+  display: flex;
+}
+.live-banner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.live-banner > div {
+  flex: 1;
+  height: 100%;
+}
+.live-banner > div > div {
+  height: 50%;
+  width: 100%;
+}
+.live-shops {
+  width: 100%;
+  height: 2.78rem;
+  margin-bottom: 0.2rem;
+  background: #fff;
+  display: flex;
+}
+.live-shops a {
+  flex: 1;
+  border-right: 0.01rem solid #e1e1e1;
+}
+.live-shops a > img {
+  width: 100%;
+  height: 100%;
+}
+.shop-disable {
+  width: 100%;
+  overflow: hidden;
+  height: 4.46rem;
+}
+.shop-contect {
+  height: 4.46rem;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-top: 0.29rem;
+}
+.shop-contect ul {
+  height: 4.46rem;
+  margin-left: 0.1rem;
+}
+.shop-contect ul li {
+  float: left;
+  width: 1.96rem;
+  height: 100%;
+  background: #fff;
+  margin-right: 0.1rem;
+}
+.shop-contect ul li h4 {
+  font-size: 0.24rem;
+  color: #3c3c3c;
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+.shop-contect ul li h4 span {
+  font-size: 0.24rem;
+  color: #3c3c3c;
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+.shop-contect ul li h4 img {
+  width: 0.32rem;
+  height: 0.32rem;
+  vertical-align: sub;
+  margin-right: 0.04rem;
+}
+.shop-contect ul li > img {
+  display: block;
+  width: 100%;
+  height: 2.4rem;
+}
+.shop-contect .shop-banner {
+  position: relative;
+  width: 100%;
+  height: 2.4rem;
+}
+.shop-contect .shop-banner img {
+  width: 100%;
+  height: 100%;
+}
+.shop-contect ul li .two-sm {
+  width: 100%;
+  height: 1.18rem;
+}
+.shop-contect ul li .two-sm img {
+  display: block;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+.shop-contect ul li p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  font-size: 0.24rem;
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+/*猜你喜欢*/
+.like {
+  width: 100%;
+  overflow: hidden;
+}
+.like-shop {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 0.14rem;
+}
+.like-shop a {
+  float: left;
+  width: 3rem;
+  height: 4.36rem;
+  margin-left: 0.1rem;
+  background: #FFFFFF;
+  margin-bottom: 0.1rem;
+  margin-top: 0.2rem;
+}
+.like-shop a img {
+  width: 100%;
+  height: 3rem;
+}
+.like-shop a p {
+  font-size: 0.24rem;
+  padding: 0 0.15rem;
+  color: #3c3c3c;
+  height: 0.6rem;
+  overflow: hidden;
+}
+.like-shop a span {
+  display: block;
+  color: #ea0000;
+  font-size: 0.28rem;
+  padding: 0.2rem 0 0.2rem 0.15rem;
+}
+.choose {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  /*overflow: visible*/
+}
+.choose a {
+  flex: 1;
+  background: #fff;
+  height: 0.96rem;
+  text-align: center;
+  padding: 0.1rem 0;
+  color: #646464;
+}
+.choose a .iconfont {
+  font-size: 0.5rem;
+}
+.choose a p {
+  font-size: 0.2rem;
+}
+.choose .active {
+  color: #ea0000;
+}
+@media screen and (min-width: 1025/100rem) {
+  body {
+    width: 5.57rem;
+    margin: 0 auto;
+  }
+  .choose {
+    width: 5.57rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}

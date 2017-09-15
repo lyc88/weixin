@@ -1,0 +1,67 @@
+@charset "utf-8";
+/*::-webkit-scrollbar {width: 0;height: 0;}*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/月饼\/css\/merchant_in\.less}line{font-family:\000035}}
+body {
+  background: #f3f3f3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/月饼\/css\/merchant_in\.less}line{font-family:\000036}}
+header,
+section .touxiang,
+section .message {
+  background: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/月饼\/css\/merchant_in\.less}line{font-family:\000039}}
+header {
+  position: relative;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding: 0 0.14rem;
+  color: #3c3c3c;
+  font-size: 0.36rem;
+  text-align: center;
+  border-bottom: 0.01rem solid #ebebeb;
+  z-index: 70;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/月饼\/css\/merchant_in\.less}line{font-family:\0000320}}
+header .icon-llmainpageback {
+  color: #3c3c3c;
+  position: absolute;
+  left: 0.14rem;
+  font-size: 0.3rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/月饼\/css\/merchant_in\.less}line{font-family:\0000326}}
+header em {
+  color: #3c3c3c;
+  position: absolute;
+  top: 0;
+  right: 0.14rem;
+  font-size: 0.28rem;
+  font-style: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/月饼\/css\/merchant_in\.less}line{font-family:\0000334}}
+section {
+  padding: 0 0.14rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/月饼\/css\/merchant_in\.less}line{font-family:\0000337}}
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 0.2rem 0.14rem;
+  font-size: 0.24rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/月饼\/css\/merchant_in\.less}line{font-family:\0000343}}
+h1 {
+  font-size: 0.3rem;
+  margin-top: 0.2rem;
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/月饼\/css\/merchant_in\.less}line{font-family:\0000348}}
+h2 {
+  font-size: 0.3rem;
+  margin-top: 0.3rem;
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/月饼\/css\/merchant_in\.less}line{font-family:\0000353}}
+p {
+  font-size: 0.26rem;
+}

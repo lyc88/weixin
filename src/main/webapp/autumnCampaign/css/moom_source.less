@@ -1,0 +1,131 @@
+@charset "utf-8";
+@rem:112.5rem;
+@3c:#3c3c3c;
+header{
+  position: relative;
+  height: 96/@rem;
+  line-height: 96/@rem;
+  padding: 0 14/@rem;
+  color: @3c;
+  font-size: 36/@rem;
+  text-align: center;
+  border-bottom: 1/@rem solid #ebebeb;
+  z-index: 70;
+}
+header  .icon-llmainpageback{
+  color: @3c;
+  position: absolute;
+  left: 14/@rem;
+  font-size: 30/@rem;
+}
+header  .icon-gengduo{
+  color: @3c;
+  position: absolute;
+  right: 14/@rem;
+  font-size: 36/@rem;
+}
+header .opa{
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+header .wicket{
+  width: 200/@rem;
+  height: auto;
+  position: absolute;
+  background: #4c4c4c;
+  right: 14/@rem;
+  top:96/@rem;
+  display: none;
+}
+header .wicket:before{
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  border-width:20/@rem;
+  border-style:solid;
+  border-color:transparent  transparent #4c4c4c transparent ;
+  position:absolute;
+  top:-40/@rem;
+  right: 12/@rem;
+}
+header .wicket a{
+  display: block;
+  width: 150/@rem;
+  margin: 0 auto;
+  font-size: 28/@rem;
+  height: 54/@rem;
+  line-height: 54/@rem;
+  color: #fff;
+}
+header .wicket a img{
+  width: 30/@rem;
+  display: inline-block;
+  vertical-align: center;
+  margin-right: 6/@rem;
+}
+header .wicket a:nth-child(1){
+  border-bottom: 0.5/@rem solid #585858;
+}
+header .wicket a:nth-child(2){
+  border-bottom: 0.5/@rem solid #585858;
+}
+header .icon-gengduo:hover + .wicket{
+  display: block;
+}
+
+section{
+  font-size: 0;
+  width: 100%;
+  padding: 0 14/@rem;
+}
+.list{
+  display: inline-block;
+  vertical-align: top;
+  width: 336/@rem;
+  height: auto;
+  margin-right: 20/@rem;
+}
+.list img{
+  width: 336/@rem;
+  height: 336/@rem;
+}
+.list h5{
+  font-size: 24/@rem;
+  color: @3c;
+  font-weight: normal;
+  margin-top: 20/@rem;
+  height: 60/@rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.list div{
+  font-size: 24/@rem;
+  color: @3c;
+  margin-top: 20/@rem;
+}
+.list div span{
+  font-size: 28/@rem;
+  color: #ea0000;
+}
+.list a {
+  display: block;
+  text-align: center;
+  font-size: 28/@rem;
+  background: #ea0000;
+  color: #fff;
+  margin: 20/@rem auto;
+  width: 94%;
+  height: 40/@rem;
+  line-height: 41/@rem;
+}
+.list .haveBeenProxiy{
+  background: #f9b2b2;
+  
+}

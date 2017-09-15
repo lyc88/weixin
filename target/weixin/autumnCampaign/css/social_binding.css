@@ -1,0 +1,74 @@
+@charset "utf-8";
+body {
+  background: #f3f3f3;
+}
+header,
+section .touxiang,
+section .message {
+  background: #fff;
+}
+header {
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding: 0 0.14rem;
+  color: #3c3c3c;
+  font-size: 0.36rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+header .icon-llmainpageback {
+  color: #3c3c3c;
+  position: absolute;
+  left: 0.14rem;
+  font-size: 0.3rem;
+}
+section {
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+section > div {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  position: relative;
+  padding-right: 0.14rem;
+  padding-left: 0.8rem;
+  font-size: 0.28rem;
+  color: #3c3c3c;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+section .icon-weixin,
+section .icon-qq,
+section .icon-xinlang {
+  display: block;
+  font-size: 0.45rem;
+  position: absolute;
+  left: 0.14rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -0.02rem;
+}
+section .icon-qq {
+  color: #4eafeb;
+}
+section .icon-weixin {
+  color: #00da3e;
+}
+section .icon-xinlang {
+  color: #ea0000;
+}
+section .icon-jiantou {
+  position: absolute;
+  right: 0.14rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.3rem;
+  margin-top: -0.02rem;
+}
+section > div > div {
+  float: right;
+  font-size: 0.24rem;
+  color: #adadad;
+  padding-right: 0.36rem;
+}

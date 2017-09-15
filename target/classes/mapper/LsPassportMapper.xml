@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tairun.dao.LsPassportMapper" >
+  <resultMap id="BaseResultMap" type="com.tairun.model.LsPassport" >
+    <id column="pass_port_id" property="passPortId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+    <result column="open_id" property="openId" jdbcType="VARCHAR" />
+    <result column="access_token" property="accessToken" jdbcType="VARCHAR" />
+    <result column="props" property="props" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="last_login_time" property="lastLoginTime" jdbcType="TIMESTAMP" />
+    <result column="binding_user_id" property="bindingUserId" jdbcType="VARCHAR" />
+    <result column="current_user_id" property="currentUserId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pass_port_id, user_id, type, nick_name, open_id, access_token, props, create_time, 
+    last_login_time, binding_user_id, current_user_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ls_passport
+    where pass_port_id = #{passPortId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ls_passport
+    where pass_port_id = #{passPortId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tairun.model.LsPassport" >
+    insert into ls_passport (pass_port_id, user_id, type, 
+      nick_name, open_id, access_token, 
+      props, create_time, last_login_time, 
+      binding_user_id, current_user_id)
+    values (#{passPortId,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{nickName,jdbcType=VARCHAR}, #{openId,jdbcType=VARCHAR}, #{accessToken,jdbcType=VARCHAR}, 
+      #{props,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{lastLoginTime,jdbcType=TIMESTAMP}, 
+      #{bindingUserId,jdbcType=VARCHAR}, #{currentUserId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tairun.model.LsPassport" >
+    insert into ls_passport
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="passPortId != null" >
+        pass_port_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="nickName != null" >
+        nick_name,
+      </if>
+      <if test="openId != null" >
+        open_id,
+      </if>
+      <if test="accessToken != null" >
+        access_token,
+      </if>
+      <if test="props != null" >
+        props,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="lastLoginTime != null" >
+        last_login_time,
+      </if>
+      <if test="bindingUserId != null" >
+        binding_user_id,
+      </if>
+      <if test="currentUserId != null" >
+        current_user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="passPortId != null" >
+        #{passPortId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="openId != null" >
+        #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="accessToken != null" >
+        #{accessToken,jdbcType=VARCHAR},
+      </if>
+      <if test="props != null" >
+        #{props,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLoginTime != null" >
+        #{lastLoginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bindingUserId != null" >
+        #{bindingUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="currentUserId != null" >
+        #{currentUserId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tairun.model.LsPassport" >
+    update ls_passport
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        nick_name = #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="openId != null" >
+        open_id = #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="accessToken != null" >
+        access_token = #{accessToken,jdbcType=VARCHAR},
+      </if>
+      <if test="props != null" >
+        props = #{props,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLoginTime != null" >
+        last_login_time = #{lastLoginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bindingUserId != null" >
+        binding_user_id = #{bindingUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="currentUserId != null" >
+        current_user_id = #{currentUserId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where pass_port_id = #{passPortId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tairun.model.LsPassport" >
+    update ls_passport
+    set user_id = #{userId,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      nick_name = #{nickName,jdbcType=VARCHAR},
+      open_id = #{openId,jdbcType=VARCHAR},
+      access_token = #{accessToken,jdbcType=VARCHAR},
+      props = #{props,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      last_login_time = #{lastLoginTime,jdbcType=TIMESTAMP},
+      binding_user_id = #{bindingUserId,jdbcType=VARCHAR},
+      current_user_id = #{currentUserId,jdbcType=VARCHAR}
+    where pass_port_id = #{passPortId,jdbcType=INTEGER}
+  </update>
+</mapper>

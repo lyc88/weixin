@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/my_order.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script src="../js/src/vue.js"></script>
+    <script src="../js/src/jquery.cookie.js"></script>
+    <script src="../js/src/vue-resource.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+
+    <title>Title</title>
+</head>
+<body>
+    <header>
+        <i class="iconfont icon-llmainpageback"></i>
+        <span>晒单评价</span>
+        <i class="iconfont icon-gengduo"></i>
+    </header>
+    <section class="sec">
+        <nav>
+            <ul>
+                <li :class="{'red':on==i}" v-for="(i,index) in nav_title" @click="choose(i)">{{i}}</li>
+            </ul>
+        </nav>
+        <div class="shop">
+            <h3>百洛数码专营店 <i class="iconfont icon-jiantou"></i>
+                <span>等待付款</span>
+            </h3>
+            <div class="shop_one" v-for="(i,index) in shop_mes">
+
+                <img src="" alt="">
+                <div class="shop-title">
+                    <h4>{{shop_mes[index].title}}</h4>
+                </div>
+                <div class="num">
+                    <p>￥{{shop_mes[index].money}}</p>
+                    <span>x{{shop_mes[index].num}}</span>
+                </div>
+            </div>
+            <div class="money">
+                <div class="money-r">
+                    共2件商品&nbsp;合计：
+                    <span>{{total_pires}}</span>
+                    <i>运费含:(￥0.00)</i>
+                </div>
+                <div class="clearfix"></div>
+                <div class="btn">
+                    <a href="javascript:void(0)" class="btn-red">取消订单</a>
+                    <a href="javascript:void(0)" class="btn-grey">付款</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+        /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
+    <script src="./js/my_order.js"></script>
+</body>
+</html>

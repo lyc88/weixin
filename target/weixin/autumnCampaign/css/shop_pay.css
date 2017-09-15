@@ -1,0 +1,155 @@
+@charset "utf-8";
+body {
+  background: #fff;
+}
+header {
+  position: relative;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  background: #fff;
+  padding: 0 0.14rem;
+}
+header .icon-llmainpageback {
+  position: absolute;
+  font-size: 0.3rem;
+}
+header h2 {
+  text-align: center;
+  font-size: 0.36rem;
+  color: #3c3c3c;
+}
+.gray {
+  width: 100%;
+  height: 0.2rem;
+  background: #EBEBEB;
+}
+article {
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+article .payMoney {
+  width: 100%;
+  height: 0.96rem;
+  color: #3c3c3c;
+  font-size: 0.32rem;
+  padding-top: 0.4rem;
+  border-bottom: 0.01rem solid #d4d4d4;
+}
+article .payMoney .left {
+  float: left;
+  padding-left: 0.14rem;
+}
+article .payMoney .right {
+  float: right;
+  padding-right: 0.14rem;
+}
+.red {
+  color: #ea0000;
+}
+.pay {
+  position: relative;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #3c3c3c;
+  font-size: 0.28rem;
+  padding: 0 0.5rem;
+  border-bottom: 0.01rem solid #d4d4d4;
+}
+.pay > i {
+  position: absolute;
+  left: 0.14rem;
+}
+.pay .icon-qiandai {
+  color: #ea0000;
+}
+.pay .icon-alipay {
+  color: #66A3FF;
+}
+.pay .icon-weixinzhifu {
+  color: #00C901;
+}
+.pay > em {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0.14rem;
+}
+.pay > em > i {
+  background: #ea0000;
+  color: #fff;
+  border-radius: 50%;
+  border: 0.01rem solid #ea0000;
+  font-weight: bold;
+  font-size: 0.2rem;
+}
+.surePay {
+  width: 100%;
+  background: #fff;
+  padding: 0.96rem 0.14rem 0 0.14rem;
+}
+.surePay a {
+  background: #ea0000;
+  display: block;
+  color: #fff;
+  font-size: 0.36rem;
+  width: 100%;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  text-align: center;
+}
+.shot {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.shot .black {
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.6;
+}
+.shot .shot-cont {
+  width: 4.5rem;
+  height: 2.7rem;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 0.2rem;
+}
+.shot .shot-cont p {
+  font-size: 0.32rem;
+  color: #3c3c3c;
+  text-align: center;
+  margin-top: 0.5rem;
+  height: 0.7rem;
+}
+.shot .shot-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+.shot .shot-btn a {
+  display: inline-block;
+  width: 1.9rem;
+  height: 0.72rem;
+  font-size: 0.32rem;
+  text-align: center;
+  line-height: 0.72rem;
+}
+.shot .shot-btn a:nth-child(1) {
+  background: #fff;
+  color: #ea0000;
+  border: 0.01rem solid #ea0000;
+  margin-right: 0.13rem;
+}
+.shot .shot-btn a:nth-child(2) {
+  background: #ea0000;
+  color: #fff;
+  border: 0.01rem solid #ea0000;
+}

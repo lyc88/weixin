@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" href="../css/style/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/shop_details.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script src="../js/src/commom.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/default-skin/default-skin.css">
+    <script src="../js/src/photoswipe.min.js"></script>
+    <script src="../js/src/photoswipe-ui-default.min.js"></script>
+    <script src="../js/src/jquery.lazyload.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <title>商品详情</title>
+
+    <script>
+        var url = window.location.href
+        //var uri = encodeURI(url)
+        var uri = encodeURIComponent(url)
+        console.log(uri)
+        //正则匹配url后面参数
+        function requesturl(attribute) {
+            var reg = new RegExp("(^|&)" + attribute + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURI(r[2].toString());
+            return null;
+        }
+        //第三方微信登陆
+        if (url.indexOf("?") != -1) {
+            //todo储存代理商id******
+            var code = requesturl('code')
+            console.log('code=' + code)
+            $.ajax({
+                url: 'http://song.85nv.cn/mobile/mooncake/queryOpenIdByCode',
+                type: 'post',
+                async: false,
+                dataType: 'Json',
+                data: {
+                    code: code,
+                    appId: 'wx2684abab04c7017d'
+                },
+                success: function (res) {
+                    console.log(res)
+                    //获取返回的openId值进行登陆
+                    localStorage.setItem('trOpenId', res.data.openId)
+                }
+            })
+        }
+        //判断是本人登录亦或者是顾客登陆转换底部按钮
+
+        if (!localStorage.getItem('trOpenId')) {
+            window.location.href =
+                "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2684abab04c7017d&redirect_uri=" + uri +
+                "&response_type=code&scope=snsapi_userinfo&state=1&connect_redirect=1#wechat_redirect"
+        }
+    </script>
+</head>
+
+<body>
+
+    <!--头部-->
+    <header>
+        <i class="iconfont icon-llmainpageback"></i>
+        <div class="choose">
+            <a href="javascript:void (0)" class="active">商品详情</a>
+            <a href="javascript:void (0)">图文详情</a>
+            <a href="javascript:void (0)">商品评论</a>
+        </div>
+        <div class="add-more">
+            <i class="iconfont icon-gouwuche "></i>
+            <i class="iconfont icon-gengduo more"></i>
+        </div>
+        <div class="opa">
+            <div class="wicket">
+                <a href="./mooncake.html"><img src="../images/more_ic_home.png" alt="">泰润月饼</a>
+                <a href="./shop_car.html"><img src="../images/more_ic_shoppingcart.png" alt="">购物车</a>
+                <a href="../myInfo.html"><img src="../images/more_ic_me.png" alt="">我的</a>
+            </div>
+        </div>
+    </header>
+    <!--内容-->
+    <div class="swiper-container warp-banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <article class="article1">
+                    <div class="demo-gallery">
+                        <div class="swiper-container banner">
+                            <div class="swiper-wrapper">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop">
+                        <h3></h3>
+                        <h4></h4>
+                        <!--<p class="privilege"><i>领券</i> <span>满199减20</span> <span>满299减50</span><i class="iconfont icon-jiantou"></i></p>-->
+
+                        <div class="reach">
+                            <i>送 &nbsp; 至</i>
+                            <div class="reach-right">
+                                <p class="reached">请选择</p>
+                                <p class="freight">运费10元，满199元免邮费</p>
+                            </div>
+                            <i class="iconfont icon-jiantou"></i>
+                        </div>
+                        <div class="selected">
+                            <i>已选择</i>
+                            <div class="selected-name">请选择规格</div>
+                            <i class="iconfont icon-jiantou"></i>
+                        </div>
+
+                    </div>
+                    <div class="use">
+                        <h3>用户评价（<em></em>） <i class="iconfont icon-jiantou"></i> <span>90.9%好评</span> </h3>
+                        <div class="three-discuss">
+                        </div>
+                        <div class="use-more">
+                            <a href="javascript:void (0)">查看全部评论</a>
+                        </div>
+                    </div>
+                    <div class="shops_store">
+                        <div><img src="../images/head.png" alt=""></div>
+                        <div>评论数(0)</div>
+                        <div>进入店铺</div>
+                    </div>
+                    <!--<div class="shop-advantage">-->
+                    <!--<div class="shop-title">-->
+                    <!--<img src="../images/bg_img3.png" alt="">-->
+                    <!--全球购-->
+                    <!--</div>-->
+                    <!--<div class="shop-mes">-->
+                    <!--<div>-->
+                    <!--<h4>描述相符</h4>-->
+                    <!--<p>4.6-->
+                    <!--<span>高于</span>-->
+                    <!--</p>-->
+                    <!--<a href="javascript:void (0)">-->
+                    <!--进入店铺-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div>-->
+                    <!--<h4>描述相符</h4>-->
+                    <!--<p>4.6-->
+                    <!--<span>高于</span>-->
+                    <!--</p>-->
+                    <!--<a href="javascript:void (0)">-->
+                    <!--进入店铺-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div>-->
+                    <!--<h4>描述相符</h4>-->
+                    <!--<p>4.6-->
+                    <!--<span>高于</span>-->
+                    <!--</p>-->
+                    <!--<a href="javascript:void (0)">-->
+                    <!--进入店铺-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <div class="good-shop">
+                        <h3>热销好货</h3>
+                        <div class=" good-shops">
+                            <div>
+                                <!--                            <a href="javascript:void (0)">
+                                    <img src="../images/sp.png" alt="">
+                                    <p>娥佩兰意以仁化妆水娥佩兰仁化a啊啊妆水</p>&lt;!&ndash;Opera/娥佩兰意以仁化妆水 补水&ndash;&gt;
+                                    <span>￥100.00</span>
+                                </a>
+                                <a href="javascript:void (0)"></a>
+                                <a href="javascript:void (0)"></a>
+                                <a href="javascript:void (0)"></a>
+                                <a href="javascript:void (0)"></a>
+                                <a href="javascript:void (0)"></a>-->
+                            </div>
+                        </div>
+                        <div class="more-shop">上拉查看图文详情</div>
+                    </div>
+                </article>
+            </div>
+            <div class="swiper-slide">
+
+            </div>
+            <div class="swiper-slide">
+                <article class="article2 demo-gallery">
+                    <div class="all-discuss">
+                        <a href="#" class="active">
+                            <p>全部评价</p>
+                            <p class="all-comment">1000</p>
+                        </a>
+                        <a href="#">
+                            <p>好评</p>
+                            <p class="good-comment">900</p>
+                        </a>
+                        <a href="#">
+                            <p>中评</p>
+                            <p class="common-comment">70</p>
+                        </a>
+                        <a href="#">
+                            <p>差评</p>
+                            <p class="bad-comment">30</p>
+                        </a>
+                        <a href="#">
+                            <p>有图</p>
+                            <p class="photo-comment">800</p>
+                        </a>
+                    </div>
+                    <!--<div class="good-discuss">
+                        <div class="good-discussrate">
+                            <h4>90%</h4>
+                            <p>好评率</p>
+                        </div>
+                        <div class="good-speak">
+                            <a href="javascript:void (0)">使用方便(100)</a>
+                            <a href="javascript:void (0)">使用方便(100)</a>
+                            <a href="javascript:void (0)">使用方便(100)</a>
+                            <a href="javascript:void (0)">补水效果好效果好(200)</a>
+                            <a href="javascript:void (0)">质量好(300)</a>
+                            <a href="javascript:void (0)">使用方便(100)</a>
+                            <a href="javascript:void (0)">补水效果好(200)</a>
+                            <a href="javascript:void (0)">质量好(300)</a>
+                        </div>
+                    </div>-->
+                    <div class="use-discuss">
+                        <!--<div class="use-warp">
+                            <div class="use-someone">
+                                <div class="use-mes">
+                              <span class="star">
+                                  <img src="../images/star_red.png" alt="">
+                                  <img src="../images/star_red.png" alt="">
+                                  <img src="../images/star_red.png" alt="">
+                                  <img src="../images/star_red.png" alt="">
+                                  <img src="../images/star_white.png" alt="">
+                              </span>
+                                    <span class="name">Veene</span>
+                                    <time>2017.01.20</time>
+                                </div>
+                                <p>收到宝贝，迫不及待打开包装试用来一下，特别喜欢这个水，水很细腻，还有淡淡的清香味，店家还送了两套小礼品，很喜欢，用完了又来光顾，谢谢店家!</p>
+                                <div class="picture">
+                                    <a href=""><img src="../images/111.png" alt=""></a>
+                                    <a href=""><img src="../images/111.png" alt=""></a>
+                                    <a href=""><img src="../images/111.png" alt=""></a>
+                                    <a href=""><img src="../images/111.png" alt=""></a>
+                                    <a href=""><img src="../images/111.png" alt=""></a>
+                                    <a href=""><img src="../images/111.png" alt=""></a>
+                                </div>
+                                <em>化妆品含净量：100ml</em>
+                            </div>
+                        </div>-->
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!--按钮弹窗-->
+    <div class="feature-bar">
+        <div class="store">
+            <div><i class="iconfont icon-dianpu"></i></div>
+            <div>店铺</div>
+        </div>
+        <div class="collect">
+            <div><i class="iconfont icon-shoucang"></i></div>
+            <div>收藏</div>
+        </div>
+        <div class="shopcar">加入购物车</div>
+        <div class="buy">立即购买</div>
+    </div>
+    <div class="feature-bar" id="salesManStore">
+        <div id="beProxy"><div class="containerFont"><i class="iconfont icon-dianpu"></i><span>已代理</span></div></div>
+        <div id="buyInMyStore">在我的店买</div>
+        <div id="shareToOthers">分享</div>
+    </div>
+    <div class="popup">
+        <div class="black"></div>
+        <div class="shop-countWarp">
+            <div class="shop-count">
+                <div class="this-top">
+                    <div class="this-top-l">
+                    </div>
+                    <div class="this-top-r">
+                        <h4></h4>
+                        <h5></h5>
+                        <!--<p>请选择 化妆品净含量</p>-->
+                    </div>
+                </div>
+                <div class="this-main"></div>
+                <!--                <h4></h4>
+                <div class="norms">
+
+                </div>-->
+                <h4>数量购买</h4>
+                <div class="number">
+                    <div class="number-how">
+                        <i class="iconfont icon-jian"></i>
+                        <input type="text" class="number-on" value="1">
+                        <i class="iconfont icon-jia"></i>
+                    </div>
+                </div>
+                <div class="go">
+                    <a href="javascript:void (0)" class="go-car" id="addToshopCart">加入购物车</a>
+                    <a href="javascript:void (0)" class="go-buy">立即购买</a>
+                </div>
+                <i class=" iconfont icon-icon"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="privileges">
+        <div class="black"></div>
+        <div class="privilegetWarp">
+            <div class="privilegeticket">
+                <h4>领优惠卷</h4>
+                <div class="all-ticket">
+                    <div class="one-ticket">
+                        <div class="ticket-l">
+                            <span class="ticket-red"><i>50</i> 元</span><span>满200元使用</span>
+                            <p>有效时间：2017-2-08至2017-04-02</p>
+                        </div>
+                        <div class="ticket-r">
+                            立即领取
+                        </div>
+                    </div>
+                    <div class="one-ticket">
+                        <div class="ticket-l">
+                            <span class="ticket-red"><i>50</i> 元</span><span>满200元使用</span>
+                            <p>有效时间：2017-2-08至2017-04-02</p>
+                        </div>
+                        <div class="ticket-r">
+                            立即领取
+                        </div>
+                    </div>
+                </div>
+
+                <i class=" iconfont icon-icon"></i>
+            </div>
+            <div class="sure">确定</div>
+        </div>
+
+    </div>
+    <div class="sendCity">
+        <div class="black"></div>
+        <div class="sendWarp">
+            <div class="sendTo">
+                <i class="iconfont icon-icon"></i>
+                <h4><i class="iconfont icon-llmainpageback"></i>送至</h4>
+                <h5>
+                    <span class="choose-red">请选择</span>
+                    <div class="line"></div>
+                </h5>
+                <div class="place">
+                    <div class="swiper-container reach_on">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--<div class="app">操作成功</div>-->
+
+
+    <!-- <div class="send">
+        <div class="black"></div>
+        <div class="sendOnwarp">
+            <div class="sendOn">
+                <i class="iconfont icon-icon"></i>
+                <h4><i class="iconfont icon-llmainpageback"></i>送至</h4>
+                <p class="activeP">
+                    <i class="iconfont icon-dingwei activeP"></i>
+                    广东省深圳市南山区大道大冲商务中心DDDDDD座
+                    <i class="iconfont icon-duigouzhuanhuan "></i>
+                </p>
+                <p>
+                    <i class="iconfont icon-dingwei"></i>
+                    广东省深圳市南山区大道大冲商务中心DDDDDD座
+                </p>
+                <p>
+                    <i class="iconfont icon-dingwei"></i>
+                    广东省深圳市南山区大道大冲商务中心DDDDDD座
+
+                </p>
+                <p>
+                    <i class="iconfont icon-dingwei"></i>
+                    广东省深圳市南山区大道大冲商务中心DDDDDD座
+
+                </p>
+                <div class="address">其他地址</div>
+            </div>
+        </div>
+
+    </div>-->
+
+    <!--<div id="demo-test-gallery" class="demo-gallery">-->
+    <!--<a href="https://farm4.staticflickr.com/3894/15008518202_b016d7d289_m.jpg" data-size="1600x1600"-->
+    <!--data-med="https://farm4.staticflickr.com/3894/15008518202_b016d7d289_b.jpg" data-med-size="1024x1024">-->
+    <!--<img src="https://farm4.staticflickr.com/3894/15008518202_b016d7d289_m.jpg" alt="" />-->
+    <!--</a>-->
+
+    <!--<a href="https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_m.jpg" data-size="1600x1068"-->
+    <!--data-med="https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_b.jpg" data-med-size="1024x1024">-->
+    <!--<img src="https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_m.jpg" alt="" />-->
+    <!--</a>-->
+    <!--</div>-->
+    <script type="text/javascript">
+        $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+        /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
+    <script src="../js/src/swiper.min.js"></script>
+    <script src="./js/shop_details.js"></script>
+    <script src="../js/src/photo.js"></script>
+
+    <script>
+        $(function () {
+            //正则匹配url后面参数
+            function requesturl(attribute) {
+                var reg = new RegExp("(^|&)" + attribute + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return decodeURI(r[2].toString());
+                return null;
+            }
+            var userId = requesturl('userId')
+
+            if (localStorage.getItem('trLoginUserId') != userId) {
+                console.log(localStorage.getItem('trLoginUserId'))
+                console.log(userId)
+                $('#salesManStore.feature-bar').hide()
+            }
+            //授权登陆回调界面
+            var url = window.location.href
+            console.log(requesturl('code'))
+            if(requesturl('code')){
+                console.log('分享链接')
+                url = url.substring(0,url.indexOf('code')-1)
+                console.log(shareUrl)
+            }
+            //            var uri = encodeURI(url)
+            //            if(!sessionStorage.getItem('trOpenId')){
+            //                window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2684abab04c7017d&redirect_uri="+uri+"&response_type=code&scope=snsapi_userinfo&state=1&connect_redirect=1#wechat_redirect"
+            //            }
+
+            //微信朋友圈分享
+            $.ajax({
+                url: 'http://lyc88.51vip.biz/weixin/signature',
+                type: 'get',
+                dataType: 'Json',
+                data: {
+                    url: url
+                },
+                success: function (data) {
+                    wx.config({
+                        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                        appId: 'wx2684abab04c7017d', // 必填，公众号的唯一标识
+                        timestamp: data.msg.timestamp, // 必填，生成签名的时间戳
+                        nonceStr: data.msg.nonceStr, // 必填，生成签名的随机串
+                        signature: data.msg.signature, // 必填，签名，见附录1
+                        jsApiList: ['onMenuShareTimeline'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                    });
+                    wx.ready(function () {
+                        // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                        wx.onMenuShareTimeline({
+                            title: '中秋泰润月饼111', // 分享标题
+                            link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                            imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504241072918&di=c2bf393ecb059e19f2206197dc4937b7&imgtype=0&src=http%3A%2F%2Fwww.showlive.cn%2Fupload%2Fopus%2F20130917%2F600_3f776e7a-7d0c-42cc-9087-c25039e71277.png', // 分享图标
+                            success: function () {
+                                // 用户确认分享后执行的回调函数
+                                alert('分享成功')
+                            },
+                            cancel: function () {
+                                // 用户取消分享后执行的回调函数
+                            }
+                        });
+                    });
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

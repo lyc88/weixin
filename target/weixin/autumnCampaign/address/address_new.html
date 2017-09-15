@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/style/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="../css/address_new.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script src="../js/src/vue.js"></script>
+    <script src="../js/src/vue-resource.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>新增地址</title>
+</head>
+<body>
+<div class="sec">
+    <header>
+        <i class="iconfont icon-llmainpageback" @click="back"></i>
+        <span>新增收地址</span>
+    </header>
+    <section>
+        <div class="mes">收货人:   <input type="text"  v-model.trim="username">  </div>
+        <div class="mes">手机号码: <input type="text"  v-model.trim="userphone"> </div>
+        <div class="mes"  @click="Area">所在地区: <input type="text"  v-model.trim="useraddress"> <i class="iconfont icon-jiantou"></i></div>
+        <div class="mes">详细街道: <input type="text"  v-model.trim="userstreet" placeholder="街道、楼牌号等">  </div>
+        <div class="mes">邮政编码: <input type="text"  v-model.trim="usercode"> </div>
+        <div class="mes add">
+            <span>标签</span>
+            <div class="label">
+                <span v-for="(items,index) in addLabel" :class="{'active':usericon==items||on==index}" @click="choose(items,index)"> {{items}}</span>
+                <em @click="Add" :class="{Text:isActive}">+</em>
+                <input :class="{Text:!isInput}"  type="text" placeholder="请输入两个字" ref="message" >
+                <a :class="{Text:!isBottom}" href="javascript:void(0)" @click="sure">{{sureBtn}}</a>
+            </div>
+<!--            <div class="add-label">
+                <input type="text" placeholder="请输入标签名称，最多5个字" v-model.trim="label">
+                <a href="javascript:void(0)" @click="Add">确定</a>
+            </div>-->
+        </div>
+        <div class="mes">
+            默认地址
+            <p>注：每次下单时会使用该地址（半小时达订单除外）</p>
+        </div>
+        <a href="javascript:void(0)" @click="Save">保存</a>
+    </section>
+    <transition name="bg">
+        <div class="black" v-if="show"></div>
+    </transition>
+    <transition name="up">
+        <div class="sendWarp"  v-show="show">
+            <div class="sendTo">
+                <i class="iconfont icon-icon" @click="Area"> </i>
+                <h4><i class="iconfont icon-llmainpageback"></i>送至</h4>
+                <h5 >
+                    <em v-for="items in addnum">{{items}}</em>
+                    <span class="choose-red">请选择</span>
+                </h5>
+                <div class="place">
+                    <div class="swiper-container reach_on">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><p v-for="(i,index) in province" @click="Area_two(i,index)" :class="{red:Red == index}">{{i.value}}</p></div>
+                            <div class="swiper-slide"><p v-for="(i,index) in city" @click="Area_three(i,index)":class="{red:Red1 == index}">{{i.value}}</p></div>
+                            <div class="swiper-slide"> <p v-for="(i,index) in area" @click="Area_four(i,index)":class="{red:Red2 == index}">{{i.value}}</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </transition>
+
+</div>
+
+
+   <script type="text/javascript">
+    $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+    /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+    /*．．．*/
+    $youziku.draw();
+   </script>
+    <script src="../js/src/swiper.min.js"></script>
+   <script src="./js/address_new.js"></script>
+</body>
+</html>

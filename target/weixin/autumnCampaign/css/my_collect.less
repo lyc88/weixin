@@ -1,0 +1,161 @@
+@charset "utf-8";
+@rem:100rem;
+@3c:#3c3c3c;
+/*::-webkit-scrollbar {width: 0;height: 0;}*/
+
+header,section .touxiang,section .message{
+  background: #fff;
+}
+header{
+  position: relative;
+  height: 96/@rem;
+  line-height: 96/@rem;
+  padding: 0 14/@rem;
+  color: @3c;
+  font-size: 36/@rem;
+  text-align: center;
+  border-bottom: 1/@rem solid #ebebeb;;
+  z-index: 70;
+}
+header  .icon-llmainpageback{
+  color: @3c;
+  position: absolute;
+  left: 14/@rem;
+  font-size: 30/@rem;
+}
+header  .redact {
+  position: absolute;
+  right: 14/@rem;
+  top: 0;
+  font-size: 26/@rem;
+}
+section {
+  width: 100%;
+  height: auto;
+}
+section nav{
+  width: 100%;
+  padding: 0 14/@rem;
+  display: flex;
+  background: #f3f3f3;
+  height: 80/@rem;
+}
+section nav a{
+  flex: 1;
+  line-height: 80/@rem;
+  text-align: center;
+  font-size: 28/@rem;
+  color: @3c;
+}
+section nav .active{
+  border-bottom: 4/@rem solid #ea0000;
+  color: #ea0000;
+}
+section .shop{
+  position: relative;
+  width: 100%;
+  height: 190/@rem;
+  padding: 0 14/@rem;
+  border-bottom: 1/@rem solid #EBEBEB;
+}
+section .shop .del{
+  position: relative;
+  width: 10%;
+  height: 100%;
+  float: left;
+}
+section .shop .del em{
+  position: absolute;
+  display: block;
+  width: 30/@rem;
+  height: 30/@rem;
+  border: 1/@rem solid #EBEBEB;
+  border-radius: 50%;
+  top:50%;
+  left:10/@rem;
+  transform: translateY(-50%);
+}
+section .shop .del em i{
+  display: block;
+  color: #ea0000;
+  width: 30/@rem;
+  height: 30/@rem;
+  font-size: 28/@rem;
+  margin-top: -2/@rem;
+}
+section .shop>img{
+  float:left;
+  width: 150/@rem;
+  height: 150/@rem;
+  margin: 20/@rem 20/@rem 20/@rem 0;
+}
+section .shop a>img{
+  float:left;
+  width: 150/@rem;
+  height: 150/@rem;
+  margin: 20/@rem 20/@rem 20/@rem 0;
+}
+section .shop .mes{
+  padding: 20/@rem 0;
+  width: 100%;
+  height: 190/@rem;
+}
+section .shop .mes i{
+  position: absolute;
+  top:50%;
+  right: 14/@rem;
+  transform: translateY(-50%);
+  color: #adadad;
+  font-size: 28/@rem;
+}
+section .shop .mes h4{
+  font-size: 28/@rem;
+  font-weight: normal;
+  color: #323232;
+  margin-top: 5/@rem;
+  word-break: break-all;
+}
+section .shop .mes p{
+  font-size: 24/@rem;
+  color: #adadad;
+  margin: 10/@rem 0;
+}
+section .shop .mes .money{
+  position: relative;
+}
+section .shop .mes .money span{
+  color: #ea0000;
+  font-size: 28/@rem;
+}
+section .shop .mes .money img{
+  position: absolute;
+  right: 0;
+  top:0;
+  width: 34/@rem;
+}
+.fade-enter-active{
+  transition: opacity 1s;
+}
+.fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  transition: opacity .3s;
+  opacity: 0;
+}
+.cancel{
+  width:100%;
+  padding: 0 14/@rem;
+  position: absolute;
+  bottom:20/@rem;
+ }
+.cancel a{
+  display: block;
+  width: 100%;
+  height: 80/@rem;
+  line-height: 80/@rem;
+  text-align: center;
+  color: #fff;
+  background: #ea0000;
+  font-size: 28/@rem;
+}

@@ -1,0 +1,175 @@
+@charset "utf-8";
+@rem:112.5rem;
+@3c:#3c3c3c;
+header{
+  position: relative;
+  height: 96/@rem;
+  line-height: 96/@rem;
+  padding: 0 14/@rem;
+  color: @3c;
+  font-size: 36/@rem;
+  text-align: center;
+  border-bottom: 1/@rem solid #ebebeb;
+  z-index: 70;
+}
+header  .icon-llmainpageback{
+  color: @3c;
+  position: absolute;
+  left: 14/@rem;
+  font-size: 30/@rem;
+}
+header  .icon-gengduo{
+  color: @3c;
+  position: absolute;
+  right: 14/@rem;
+  font-size: 36/@rem;
+}
+header .opa{
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+header .wicket{
+  width: 200/@rem;
+  height: auto;
+  position: absolute;
+  background: #4c4c4c;
+  right: 14/@rem;
+  display: none;
+  top:96/@rem
+}
+header .wicket:before{
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  border-width:20/@rem;
+  border-style:solid;
+  border-color:transparent  transparent #4c4c4c transparent ;
+  position:absolute;
+  top:-40/@rem;
+  right: 12/@rem;
+}
+header .wicket a{
+  display: block;
+  width: 150/@rem;
+  margin: 0 auto;
+  font-size: 28/@rem;
+  height: 54/@rem;
+  line-height: 54/@rem;
+  color: #fff;
+}
+header .wicket a img{
+  width: 30/@rem;
+  display: inline-block;
+  vertical-align: center;
+  margin-right: 6/@rem;
+}
+header .wicket a:nth-child(1){
+  border-bottom: 0.5/@rem solid #585858;
+}
+header .wicket a:nth-child(2){
+  border-bottom: 0.5/@rem solid #585858;
+}
+header .icon-gengduo:hover + .wicket{
+  display: block;
+}
+
+.user_message{
+  width: 100%;
+  height: 174/@rem;
+  line-height: 174/@rem;
+  background:linear-gradient(#79706e,#9d9999);
+  position: relative;
+}
+.user_message img{
+  width: 134/@rem;
+  height: 134/@rem;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left: 14/@rem;
+}
+.user_message h1{
+  font-size: 32/@rem;
+  color: #fff;
+  padding-left: 160/@rem;
+}
+.user_message span{
+  display: block;
+  width: 120/@rem;
+  height: 46/@rem;
+  line-height: 48/@rem;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  background: #ea0000;
+  color: #fff;
+  font-size: 24/@rem;
+  right: 26/@rem;
+  text-align: center;
+}
+section .shop{
+  position: relative;
+  width: 100%;
+  height: 190/@rem;
+  padding: 0 14/@rem;
+  border-bottom: 1/@rem solid #EBEBEB;
+}
+section .shop>img{
+  float:left;
+  width: 150/@rem;
+  height: 150/@rem;
+  margin: 20/@rem 20/@rem 20/@rem 0;
+}
+section .shop a>img{
+  float:left;
+  width: 150/@rem;
+  height: 150/@rem;
+  margin: 20/@rem 20/@rem 20/@rem 0;
+}
+section .shop .mes{
+  padding: 20/@rem 0;
+  width: 100%;
+  height: 190/@rem;
+}
+section .shop .mes i{
+  position: absolute;
+  top:50%;
+  right: 14/@rem;
+  transform: translateY(-50%);
+  color: #adadad;
+  font-size: 28/@rem;
+}
+section .shop .mes h4{
+  font-size: 28/@rem;
+  font-weight: normal;
+  color: #323232;
+  margin-top: 5/@rem;
+  word-break: break-all;
+  height: 70/@rem;
+  margin-bottom: 10/@rem;
+}
+section .shop .mes .money{
+  position: relative;
+  font-size: 24/@rem;
+}
+section .shop .mes .money span{
+  color: #ea0000;
+  font-size: 28/@rem;
+}
+section .shop .mes em{
+  position: absolute;
+  right: 20/@rem;
+  bottom:14/@rem;
+  display: block;
+  width: 90/@rem;
+  text-align: center;
+  color: #adadad;
+  border: 1/@rem solid #adadad;
+  font-style: normal;
+  font-size: 24/@rem;
+}

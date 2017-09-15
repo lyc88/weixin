@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\000032}}
+a {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\000033}}
+a img {
+  display: block;
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\000034}}
+li {
+  list-style: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\000035}}
+* {
+  word-break: break-all;
+  tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\0000317}}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\0000318}}
+.clearfix {
+  zoom: 1;
+  /* for IE6 IE7 */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\0000319}}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\0000320}}
+body,
+html {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  overflow-x: hidden;
+  /*overflow-y: auto;*/
+  font-family: 'Microsoft yahei';
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\0000324}}
+textarea,
+button,
+input {
+  -webkit-appearance: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\0000325}}
+.loading-warp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\0000334}}
+.loading {
+  background: url('../../images/interactive_ic_fox11.png') no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  z-index: 9999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\0000346}}
+.loading img {
+  width: 100%;
+  position: relative;
+  animation: mymove 1.5s infinite linear;
+  -webkit-animation: mymove 1.5s infinite linear;
+}
+@keyframes mymove {
+  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\0000354}}
+  from {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/THINK\/Desktop\/wwwwap\/wap\/css\/style\/Common-moble\.less}line{font-family:\0000360}}
+  to {
+    transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+  }
+}

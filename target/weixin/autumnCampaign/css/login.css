@@ -1,0 +1,141 @@
+@charset "utf-8";
+header {
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding: 0 0.14rem;
+}
+header i {
+  color: #3c3c3c;
+  font-size: 0.3rem;
+}
+section {
+  text-align: center;
+  width: 100%;
+  height: auto ;
+}
+section .warp {
+  text-align: center;
+  width: 100%;
+  height: auto ;
+}
+section .warp > a {
+  display: block;
+  margin: 0 auto;
+  width: 5.9rem;
+  background: #ea0000;
+  color: #fff;
+  height: 0.74rem;
+  font-size: 0.32rem;
+  line-height: 0.74rem;
+}
+section .warp img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.3rem 0;
+}
+section .warp .input-container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 5.9rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  border-bottom: 0.01rem solid #808080;
+  margin-bottom: 0.6rem;
+}
+section .warp .red {
+  border-bottom: 0.01rem solid #ea0000;
+}
+section .warp .input-container .Ired {
+  color: #ea0000;
+}
+section .warp .input-container i {
+  color: #808080;
+}
+section .warp .input-container .icon-artboard31 {
+  position: absolute;
+  left: 0.3rem;
+  font-size: 0.36rem;
+}
+section .warp .input-container .icon-suo {
+  position: absolute;
+  left: 0.3rem;
+  font-size: 0.36rem;
+}
+section .warp .input-container input {
+  border: 0;
+  color: #808080;
+  width: 100%;
+  font-size: 0.24rem;
+  padding: 0.1rem 1.4rem 0.1rem 0.9rem;
+  outline: 0;
+}
+section .warp .input-container .icon-icon {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0.3rem;
+  color: #808080;
+  font-size: 0.32rem;
+}
+section .warp .input-container .icon-eye-close,
+section .warp .input-container .icon-yanjing-copy-copy-copy-copy {
+  position: absolute;
+  right: 0.9rem;
+  top: 0;
+  color: #808080;
+  font-size: 0.32rem;
+}
+section .warp .register-forget {
+  display: inline-block;
+  width: 4.5rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+}
+section .warp .register-forget .register {
+  display: inline-block;
+  float: left;
+  color: #808080;
+  font-size: 0.24rem;
+}
+section .warp .register-forget .forget {
+  display: inline-block;
+  float: right;
+  color: #7384ff;
+  font-size: 0.24rem;
+}
+section .warp .over-entry {
+  position: relative;
+  border-top: 0.01rem solid #d4d4d4;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 1rem;
+}
+section .warp .over-entry span {
+  display: block;
+  background: #fff;
+  width: 1.5rem;
+  padding: 0 0.1rem;
+  position: absolute;
+  left: 50%;
+  top: -0.15rem;
+  margin-left: -0.75rem;
+  font-size: 0.24rem;
+  color: #808080;
+}
+section .warp .over-entry i {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0 0.54rem;
+  margin-top: 0.4rem;
+}
+section .warp .over-entry .icon-xinlang {
+  color: #ea0000;
+}
+section .warp .over-entry .icon-qq {
+  color: #35BAFF;
+}
+section .warp .over-entry .icon-weixin {
+  color: #00da3e;
+}

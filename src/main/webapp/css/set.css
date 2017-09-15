@@ -1,0 +1,138 @@
+@charset "utf-8";
+body {
+  background: #f3f3f3;
+}
+header,
+section .touxiang,
+section .message {
+  background: #fff;
+}
+header {
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding: 0 0.14rem;
+  color: #3c3c3c;
+  font-size: 0.36rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+header .icon-llmainpageback {
+  color: #3c3c3c;
+  position: absolute;
+  left: 0.14rem;
+  font-size: 0.3rem;
+}
+section {
+  width: 100%;
+  height: auto;
+}
+section .user-mes,
+section .user-safety,
+section .other {
+  width: 100%;
+  height: auto;
+}
+section > div > h3 {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #3c3c3c;
+  font-size: 0.32rem;
+  font-weight: normal;
+  padding: 0 0.14rem;
+}
+section > div .row {
+  width: 100%;
+  background: #fff;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #3c3c3c;
+  font-size: 0.28rem;
+  padding: 0 0.14rem;
+  position: relative;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+section > div .row .row-right {
+  float: right;
+  position: absolute;
+  right: 0.14rem;
+  font-size: 0.24rem;
+  color: #adadad;
+}
+section > div .row .row-right .icon-jiantou {
+  font-size: 0.3rem;
+}
+section .quit {
+  width: 100%;
+  padding: 0 0.14rem;
+}
+section .quit a {
+  display: block;
+  background: #ea0000;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.32rem;
+  margin-top: 0.8rem;
+}
+.sure0r {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.sure0r .black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0;
+}
+.sure0r .sure {
+  position: absolute;
+  width: 4.6rem;
+  height: 2.6rem;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.sure0r .sure h3 {
+  font-size: 0.28rem;
+  color: #3c3c3c;
+  text-align: center;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-bottom: #EBEBEB;
+}
+.sure0r .sure p {
+  padding: 0.3rem 0;
+  font-size: 0.24rem;
+  color: #3c3c3c;
+  text-align: center;
+}
+.sure0r .sure > div {
+  text-align: center;
+}
+.sure0r .sure > div a {
+  display: inline-block;
+  width: 1.92rem;
+  height: 0.72rem;
+  line-height: 0.72rem;
+  font-size: 0.32rem;
+}
+.sure0r .sure > div .canle-on {
+  background: #fff;
+  color: #ea0000;
+  border: 0.01rem solid #ea0000;
+}
+.sure0r .sure > div .sure-on {
+  background: #ea0000 ;
+  color: #fff;
+  margin-left: 0.1rem;
+  border: 0.01rem solid #ea0000;
+}

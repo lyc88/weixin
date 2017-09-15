@@ -1,0 +1,269 @@
+@charset "utf-8";
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+body {
+  background: #F5F5F5;
+  font-family: PingFangSC-Thin, sans-serif;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 0.96rem;
+  background: #fff;
+  display: none;
+}
+header .icon-left .iconfont {
+  font-size: 0.28rem;
+  color: #868686;
+}
+header .icon-left img,
+header .icon-right img {
+  width: 0.3rem;
+  height: 0.3rem;
+}
+header .icon-left {
+  display: block;
+  text-align: center;
+  float: left;
+  height: 100%;
+  line-height: 0.96rem;
+  vertical-align: middle;
+  padding: 0 0.3rem 0 0.14rem;
+}
+header .icon-right {
+  display: block;
+  text-align: center;
+  float: right;
+  padding: 0 0.14rem 0 0.2rem;
+  height: 100%;
+  line-height: 0.96rem;
+  vertical-align: middle;
+  font-size: 0.28rem;
+  color: #868686 ;
+}
+header .icon-left span,
+header .icon-right span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+header .centre {
+  float: left;
+  margin: auto;
+  width: 4.74rem;
+  height: 100%;
+}
+.input1 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 0.54rem;
+  background: #fff;
+}
+.input1 .iconfont {
+  position: absolute;
+  font-size: 0.37rem;
+  top: 50%;
+  left: 0.1rem;
+  transform: translateY(-50%);
+  color: #adadad;
+}
+header input::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+header input:-moz-placeholder {
+  color: #b3b3b3;
+}
+header input::-moz-placeholder {
+  color: #b3b3b3;
+}
+header input:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+header input {
+  width: 100%;
+  height: 100%;
+  display: block;
+  float: left;
+  border: 0;
+  outline: 0;
+  background: #F5F5F5;
+  color: #fff;
+  padding-left: 0.6rem;
+  font-size: 0.24rem;
+  letter-spacing: 0.01rem;
+}
+.contect {
+  width: 100%;
+}
+.img {
+  width: 100%;
+  height: 3rem;
+}
+.img img {
+  width: 100%;
+  height: 3rem;
+}
+nav {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  background: #F5F5F5;
+  height: 0.8rem;
+  align-items: center;
+}
+nav > span {
+  flex: 1;
+  text-align: center;
+  color: #3c3c3c;
+  position: relative;
+}
+nav > a {
+  flex: 1;
+  text-align: center;
+  color: #3c3c3c;
+  font-size: 0.28rem;
+  position: relative;
+}
+nav > a .iconfont {
+  font-size: 0.13rem;
+  display: block;
+}
+nav a span {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  width: 0.18rem;
+  height: 0.3rem;
+  top: 50%;
+  right: 0.14rem;
+  transform: translateY(-50%);
+}
+nav a span img {
+  width: 100%;
+  height: 100%;
+}
+nav a .icon-gengduo1 {
+  font-size: 0.35rem;
+  color: #3c3c3c;
+}
+.active {
+  color: #ea0000;
+}
+.shops {
+  width: 100%;
+  font-size: 0;
+  height: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 0.14rem;
+  margin-bottom: 0.96rem;
+}
+.shop-mes {
+  overflow: hidden;
+  width: 100%;
+  padding: 0.2rem 0;
+  border-bottom: 0.01rem solid #f5f5f5;
+}
+.shop-mes img {
+  display: block;
+  float: left;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.2rem;
+}
+.shop-mes > div {
+  width: 100%;
+  height: 1.8rem;
+  position: relative;
+}
+.shop-mes > div h5 {
+  color: #3c3c3c;
+  font-size: 0.28rem;
+  font-weight: normal;
+}
+.shop-mes > div p {
+  color: #ea0000;
+  font-size: 0.32rem;
+  padding: 0.13rem 0;
+  margin-top: 0.5rem;
+}
+.shop-mes > div span {
+  display: block;
+  color: #3c3c3c;
+  font-size: 0.24rem;
+  position: absolute;
+  right: 0.14rem;
+  bottom: 0.36rem;
+  width: 0.9rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+  border: 0.01rem solid #3c3c3c;
+}
+.list {
+  display: inline-block;
+  width: 3rem;
+  height: auto;
+  margin-left: 0.1rem;
+  background: #fff;
+  margin-bottom: 0.1rem;
+}
+.list img {
+  width: 3rem;
+  height: 3rem;
+}
+.list h5 {
+  color: #3c3c3c;
+  font-size: 0.28rem;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list p {
+  color: #ea0000;
+  font-size: 0.32rem;
+  padding: 0.13rem 0;
+}
+.choose {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  /*overflow: visible*/
+}
+.choose a {
+  flex: 1;
+  background: #fff;
+  height: 0.96rem;
+  text-align: center;
+  padding: 0.1rem 0;
+  color: #646464;
+}
+.choose a .iconfont {
+  font-size: 0.5rem;
+}
+.choose a p {
+  font-size: 0.2rem;
+}
+.choose .active {
+  color: #ea0000;
+}
+@media screen and (min-width: 1025/100rem) {
+  body {
+    width: 5.57rem;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 767/100rem) {
+  nav a .iconfont {
+    font-size: 0.2rem;
+  }
+}

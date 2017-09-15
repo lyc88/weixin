@@ -1,0 +1,373 @@
+@charset "utf-8";
+body {
+  background: #f3f3f3;
+  -webkit-overflow-scrolling: touch;
+}
+header {
+  height: 0.96rem;
+  line-height: 0.96rem;
+  background: #ea0000;
+  padding: 0 0.14rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.36rem;
+  position: relative;
+}
+header span {
+  position: absolute;
+  right: 0.14rem;
+  font-size: 0.28rem;
+  color: #fff;
+}
+.has {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.92rem;
+}
+.has .shop-one {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 0.2rem;
+}
+.has .shop-one .title {
+  width: 100%;
+  height: 0.8rem;
+  position: relative;
+}
+.has .shop-one .title h3 {
+  height: 100%;
+  line-height: 0.8rem;
+  padding: 0 1.6rem 0 0.7rem;
+  color: #3c3c3c;
+  font-size: 0.28rem;
+}
+.has .shop-one .unselected {
+  background: #fff;
+  border: 0.01rem solid #d4d4d4;
+}
+.has .shop-one em {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0.14rem;
+  margin-top: -0.2rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  text-align: center;
+  background: #ea0000;
+}
+.has .shop-one .title > em i {
+  font-size: 0.3rem;
+  color: #fff;
+  display: none;
+}
+.has .shop-one .title .show {
+  display: block;
+  color: #fff;
+}
+.has .shop-one .title span {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  display: block;
+  height: 0.2rem;
+  margin-top: -0.2rem;
+  color: #d4d4d4;
+  font-size: 0.24rem;
+}
+.has .shop-one .contect {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-top: 0.01rem solid #d4d4d4;
+}
+.has .shop-one .contect em i {
+  font-size: 0.3rem;
+  color: #fff;
+  display: none;
+}
+.has .shop-one .contect em .show {
+  display: block;
+  color: #fff;
+}
+.has .shop-one .contect img {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0.18rem 0.18rem 0.18rem 0.7rem;
+  float: left;
+}
+.has .shop-one .contect .contect-right {
+  width: 100%;
+  height: auto;
+}
+.has .shop-one .contect .contect-right h4 {
+  color: #3c3c3c;
+  font-size: 0.26rem;
+  word-break: break-all;
+  text-indent: 0.5em;
+  margin-top: 0.18rem;
+  padding-right: 0.14rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.has .shop-one .contect .contect-right p {
+  color: #adadad;
+  font-size: 0.22rem;
+  margin: 0.1rem 0;
+  padding-right: 0.14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.has .shop-one .contect .contect-right .price-on {
+  font-size: 0.26rem;
+  color: #ea0000;
+  padding-right: 0.1rem;
+}
+.has .shop-one .contect .contect-right .price-cut {
+  font-size: 0.22rem;
+  color: #adadad;
+  text-decoration: line-through;
+}
+.contect-right .number-how {
+  width: 1.16rem;
+  height: 0.33rem;
+  border: 0.01rem solid #d4d4d4;
+  float: right;
+  margin-right: 0.24rem;
+}
+.contect-right .number-how i {
+  color: #3c3c3c;
+  font-weight: bold;
+  font-size: 0.2rem;
+  display: block;
+  height: 100%;
+  line-height: 0.33rem;
+  width: 0.32rem;
+  text-align: center;
+  float: left;
+}
+.contect-right .number-on {
+  float: left;
+  width: 0.48rem;
+  height: 100%;
+  line-height: 0.33rem;
+  text-align: center;
+  color: #3c3c3c;
+  font-size: 0.2rem;
+  outline: none;
+  border: 0;
+  border-right: 0.01rem solid #d4d4d4;
+  border-left: 0.01rem solid #d4d4d4;
+}
+.none {
+  display: none;
+  width: 3.88rem;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+.none img {
+  width: 100%;
+}
+.none h4 {
+  font-size: 0.36rem;
+  font-weight: normal;
+  color: #adadad;
+  margin: 0.8rem 0 0.4rem;
+}
+.car-none {
+  display: none;
+}
+.login-none {
+  display: none;
+}
+.none .car-none .continue {
+  display: block;
+  width: 1.7rem;
+  text-align: center;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  background: #ea0000;
+  color: #fff;
+  border: 0.01rem solid #ea0000;
+  position: absolute;
+  left: 0;
+  font-size: 0.28rem;
+}
+.none .car-none .collect {
+  display: block;
+  width: 1.7rem;
+  text-align: center;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  color: #ea0000;
+  position: absolute;
+  right: 0;
+  border: 0.01rem solid #ea0000;
+  font-size: 0.28rem;
+}
+.none .login-none > a {
+  display: block;
+  margin: 0 auto;
+  width: 3rem;
+  text-align: center;
+  height: 0.78rem;
+  line-height: 0.78rem;
+  background: #ea0000;
+  color: #fff;
+  border: 0.01rem solid #ea0000;
+  font-size: 0.32rem;
+}
+.all-shop {
+  height: 0.96rem;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  bottom: 0.96rem;
+  left: 0;
+  z-index: 9999;
+}
+.all-shop em {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0.14rem;
+  margin-top: -0.2rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  border: 0.01rem solid #ff0000;
+  border-radius: 50%;
+  text-align: center;
+  background: #ea0000;
+  z-index: 500;
+}
+.all-shop .unselected {
+  background: #fff;
+  border: 0.01rem solid #d4d4d4;
+}
+.all-shop em i {
+  font-size: 0.3rem;
+  color: #fff;
+  display: none;
+  z-index: 500;
+}
+.all-shop em .show {
+  display: block;
+}
+.all-shop > span {
+  display: inline-block;
+  font-size: 0.26rem;
+  color: #3c3c3c;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding-left: 0.66rem;
+}
+.all-shop .all-money {
+  display: inline-block;
+  float: right;
+}
+.all-shop .all-money > div {
+  float: left;
+  height: 0.96rem;
+  padding-right: 0.2rem;
+}
+.all-shop .all-money > div p {
+  font-size: 0.28rem;
+  color: #3c3c3c;
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+.all-shop .all-money > div > div {
+  float: right;
+  color: #3c3c3c;
+  font-size: 0.2rem;
+}
+.all-shop .all-money > div p span {
+  color: #ea0000;
+}
+.all-shop .all-money > a {
+  float: left;
+  display: block;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  width: 1.9rem;
+  background: #ea0000;
+  color: #fff;
+  text-align: center;
+  font-size: 0.28rem;
+}
+.all-shop .all-money > a > i {
+  font-style: normal;
+}
+.all-shop .delete {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+.all-shop .delete .btn {
+  height: 100%;
+  padding: 0.17rem 0;
+  display: inline-block;
+  position: absolute;
+  right: 0.14rem;
+}
+.all-shop .delete .btn .btn_A {
+  display: inline-block;
+  width: 1.5rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  border: 0.01rem solid #d4d4d4;
+}
+.all-shop .delete .btn .btn_D {
+  display: inline-block;
+  width: 1.5rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  border: 0.01rem solid #ea0000;
+  color: #ea0000;
+}
+.all-shop .delete > span {
+  display: inline-block;
+  font-size: 0.26rem;
+  color: #3c3c3c;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding-left: 0.66rem;
+}
+.choose {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.choose a {
+  flex: 1;
+  background: #fff;
+  height: 0.96rem;
+  text-align: center;
+  padding: 0.1rem 0;
+  color: #646464;
+}
+.choose a .iconfont {
+  font-size: 0.5rem;
+}
+.choose a p {
+  font-size: 0.2rem;
+}
+.choose .active {
+  color: #ea0000;
+}

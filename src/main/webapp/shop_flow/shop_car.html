@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/shop_car.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>购物车</title>
+</head>
+<body>
+       <header>
+           购物车
+           <span>编辑</span>
+       </header>
+       <div class="has">
+          <!-- <div class="shop-one">
+               <div class="title">
+                   <em><i class="iconfont icon-gou show"></i></em>
+                   <h3>美好单品集中营</h3>
+                   <span>领优惠券 <i class="iconfont icon-jiantou"></i></span>
+               </div>
+               <div class="contect">
+                   <em><i class="iconfont icon-gou show"></i></em>
+                   <img src="../images/sp.png" alt="">
+                   <div class="contect-right">
+                       <h4>[歪果家]韩版学院风大码宽松女夹克棒球外套</h4>
+                       <p>颜色：军绿色；尺码：均码；</p>
+                       <div class="price">
+                           <span class="price-on">￥66.50</span>
+                           <span class="price-cut">￥95.00</span>
+                           <div class="number-how">
+                               <i class="iconfont icon-jian"></i>
+                               <input class="number-on" value="1">
+                               <i class="iconfont icon-jia"></i>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="contect">
+                   <em><i class="iconfont icon-gou show"></i></em>
+                   <img src="../images/sp.png" alt="">
+                   <div class="contect-right">
+                       <h4>[歪果家]韩版学院风大码宽松女夹克棒球外套</h4>
+                       <p>颜色：军绿色；尺码：均码；</p>
+                       <div class="price">
+                           <span class="price-on">￥66.50</span>
+                           <span class="price-cut">￥95.00</span>
+                           <div class="number-how">
+                               <i class="iconfont icon-jian"></i>
+                               <input class="number-on" value="1">
+                               <i class="iconfont icon-jia"></i>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="contect">
+                   <em><i class="iconfont icon-gou show"></i></em>
+                   <img src="../images/sp.png" alt="">
+                   <div class="contect-right">
+                       <h4>[歪果家]韩版学院风大码宽松女夹克棒球外套</h4>
+                       <p>颜色：军绿色；尺码：均码；</p>
+                       <div class="price">
+                           <span class="price-on">￥66.50</span>
+                           <span class="price-cut">￥95.00</span>
+                           <div class="number-how">
+                               <i class="iconfont icon-jian"></i>
+                               <input class="number-on" value="1">
+                               <i class="iconfont icon-jia"></i>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>-->
+       </div>
+       <div class="none">
+           <img src="../images/shopcart_ic_nothing.png" alt="">
+           <div class="car-none">
+               <h4>购物车空空如也</h4>
+               <a class="continue" href="javascript:void(0)">继续购物</a>
+               <a class="collect" href="javascript:void(0)">查看收藏</a>
+           </div>
+           <div class="login-none">
+               <h4>登录后同步电脑和手机购物车的商品</h4>
+               <a href="javascript:void(0)">立即登录</a>
+           </div>
+
+       </div>
+       <div class="all-shop">
+           <div class="delete">
+               <span>全选</span>
+               <div class="btn">
+                   <div class="btn_A">加入收藏</div>
+                   <div class="btn_D">删除</div>
+               </div>
+           </div>
+           <em class="unselected"><i class="iconfont icon-gou"></i></em>
+           <span>全选</span>
+           <div class="all-money">
+               <div>
+                   <p>合计：<span></span></p>
+                    <div>不含运费</div>
+               </div>
+               <a href="javascript:void(0)">结算(<i>0</i>)</a>
+           </div>
+       </div>
+       <div class="choose">
+           <a href="javascript:void(0)"><i class="iconfont icon-shouye-shouye"></i><p>泰润月饼</p></a>
+           <a href="javascript:void(0)" class="active"><i class="iconfont icon-gouwuche"></i><p>购物车</p></a>
+           <a href="javascript:void(0)"><i class="iconfont icon-artboard31"></i><p>我的</p></a>
+       </div>
+       <script type="text/javascript">
+           $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+           /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+           /*．．．*/
+           $youziku.draw();
+       </script>
+       <script src="./js/shop_car.js"></script>
+       <script>
+           $(function () {
+               var url = window.location.href
+               if(url.indexOf("?")!=-1){
+                   var strs;
+                   var str = url.substr(1);
+                   strs= str.split("&");
+                   console.log(strs)
+                   var code = strs[0].split("code=")[1]
+                   var state = strs[1].split("state=")[1]
+                   console.log('code='+code)
+                   console.log('state='+state)
+                   $.ajax({
+                       url:'http://lyc88.51vip.biz/weixin/getOpenid',
+                       type:'get',
+                       data:{code:code ,state:state},
+//                       dataType:'json',
+                       success: function (data) {
+                           console.log(data)
+                       },
+                       error: function(XMLHttpRequest, textStatus, errorThrown) {
+                           //TODO
+                           console.log(textStatus)
+                       }
+                   })
+               }
+
+           })
+       </script>
+</body>
+</html>

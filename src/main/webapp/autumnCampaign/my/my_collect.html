@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/my_collect.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/vue.js"></script>
+    <script src="../js/src/vue-resource.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>我的收藏</title>
+</head>
+<body>
+<div  class="sec">
+    <header>
+        <i class="iconfont icon-llmainpageback"></i>
+        <span>我的收藏</span>
+        <div class="redact" @click="del_choose()">{{redact}}</div>
+    </header>
+    <section>
+        <nav>
+            <a href="javascript:void (0)" :class="{'active':nav_on==2}" @click="choose_nac(2)">商家</a>
+            <a href="javascript:void (0)" :class="{'active':nav_on==1}"  @click="choose_nac(1)">商品</a>
+        </nav>
+        <div class="shop_all" v-if="show_nav">
+            <div class="shop" v-for="(item,index) in shop">
+                <transition name="fade">
+                    <div  class="del" v-if="show">
+                        <em>
+                            <i class="iconfont" :class="{'icon-gouSolid':item.check}" @click="selected_check(item)"></i>
+                        </em>
+                    </div>
+                </transition>
+                <img src="../images/touxiang.png" alt="">
+                <div class="mes">
+                    <h4>{{item.shop_name}}</h4>
+                    <p>{{item.shop_title}}</p>
+                    <div class="money">
+                        <span>￥{{item.shop_money}}</span>
+                        <img src="../images/collection_btnic_shoppingcart_nol.png" alt="" v-if="!show">
+                    </div>
+                </div>
+            </div>
+            <transition name="fade">
+                <div class="cancel" v-if="show">
+                    <a href="javascript:void (0)" @click="del_on">取消关注</a>
+                </div>
+            </transition>
+        </div>
+        <div class="store_all" v-if="!show_nav">
+            <div class="shop" v-for="(item,index) in store">
+                <transition name="fade">
+                    <div  class="del" v-if="show2">
+                        <em>
+                            <i class="iconfont" :class="{'icon-gouSolid':item.check}" @click="selected_check(item)"></i>
+                        </em>
+                    </div>
+                </transition>
+                <a href="javascript:void (0)">
+                    <img src="../images/touxiang.png" alt="">
+                    <div class="mes">
+                        <h4>{{item.store_name}}</h4>
+                        <p>商品数量:{{item.shop_num}}</p>
+                        <p>收藏人数:{{item.collect}}</p>
+                        <i class="iconfont icon-jiantou"></i>
+                    </div>
+                </a>
+            </div>
+            <transition name="fade">
+                <div class="cancel" v-if="show2">
+                    <a href="javascript:void (0)" @click="del_store">取消关注</a>
+                </div>
+            </transition>
+        </div>
+
+    </section>
+</div>
+    <script type="text/javascript">
+        $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+        /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
+    <script src="./js/my_collect.js"></script>
+</body>
+</html>

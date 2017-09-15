@@ -1,0 +1,122 @@
+@charset "utf-8";
+body {
+  background: #f3f3f3;
+}
+header,
+section .touxiang,
+section .message {
+  background: #fff;
+}
+header {
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding: 0 0.14rem;
+  color: #3c3c3c;
+  font-size: 0.36rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+header .icon-llmainpageback {
+  color: #3c3c3c;
+  position: absolute;
+  left: 0.14rem;
+  font-size: 0.3rem;
+}
+header em {
+  position: absolute;
+  right: 0.14rem;
+  color: #3c3c3c;
+  font-size: 0.3rem;
+  font-style: normal;
+}
+section {
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+section > div {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 0.14rem;
+  position: relative;
+}
+section > div .left {
+  width: 90%;
+  float: left;
+}
+section > div .right {
+  width: 10%;
+  float: left;
+  text-align: center;
+}
+section > div .right em {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0.14rem;
+  transform: translateY(-50%);
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-radius: 50%;
+  background: #fff ;
+  border: 0.01rem solid #ebebeb;
+}
+section > div .right .none {
+  background: #ea0000;
+  border: 0;
+}
+section > div .right em .icon-gou1 {
+  font-size: 0.3rem;
+  color: #fff;
+  margin-left: 0.03rem;
+}
+section > div .top {
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  position: relative;
+}
+section > div .top span {
+  font-size: 0.32rem;
+  color: #292929;
+  margin-right: 0.32rem;
+}
+section > div .top i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  font-size: 0.02rem;
+  color: #389aff;
+  font-style: normal;
+  width: 0.66rem;
+  height: 0.33rem;
+  line-height: 0.33rem;
+  text-align: center;
+  border: 0.01rem solid #389aff;
+  vertical-align: middle;
+  font-size: 0.24rem;
+}
+section > div .top .phone {
+  display: inline-block;
+  float: right;
+  font-size: 0.28rem;
+}
+section > div .bottom {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 0.2rem;
+}
+section > div .bottom p {
+  display: inline;
+}
+section > div .bottom span {
+  color: #ea0000;
+  font-size: 0.24rem;
+}
+section > div .bottom {
+  color: #3c3c3c;
+  font-size: 0.24rem;
+}

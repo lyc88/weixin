@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/phone_changed.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script src="../js/src/vue.js"></script>
+    <script src="../js/src/jquery.cookie.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>变更手机号</title>
+</head>
+<body>
+<header>
+    <i class="iconfont icon-llmainpageback"></i>
+    <span>变更手机号</span>
+</header>
+<section >
+    <i class="iconfont icon-gou2"></i>
+    <h4>恭喜您，手机号变更成功</h4>
+    <p class="sec">您绑定的手机号：{{phone}}</p>
+    <a href="javascript:void(0)">确定</a>
+</section>
+
+<script type="text/javascript">
+    $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+    /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+    /*．．．*/
+    $youziku.draw();
+</script>
+<script src="./js/phone_changed.js"></script>
+</body>
+</html>

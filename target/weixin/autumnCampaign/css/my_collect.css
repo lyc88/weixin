@@ -1,0 +1,161 @@
+@charset "utf-8";
+/*::-webkit-scrollbar {width: 0;height: 0;}*/
+header,
+section .touxiang,
+section .message {
+  background: #fff;
+}
+header {
+  position: relative;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding: 0 0.14rem;
+  color: #3c3c3c;
+  font-size: 0.36rem;
+  text-align: center;
+  border-bottom: 0.01rem solid #ebebeb;
+  z-index: 70;
+}
+header .icon-llmainpageback {
+  color: #3c3c3c;
+  position: absolute;
+  left: 0.14rem;
+  font-size: 0.3rem;
+}
+header .redact {
+  position: absolute;
+  right: 0.14rem;
+  top: 0;
+  font-size: 0.26rem;
+}
+section {
+  width: 100%;
+  height: auto;
+}
+section nav {
+  width: 100%;
+  padding: 0 0.14rem;
+  display: flex;
+  background: #f3f3f3;
+  height: 0.8rem;
+}
+section nav a {
+  flex: 1;
+  line-height: 0.8rem;
+  text-align: center;
+  font-size: 0.28rem;
+  color: #3c3c3c;
+}
+section nav .active {
+  border-bottom: 0.04rem solid #ea0000;
+  color: #ea0000;
+}
+section .shop {
+  position: relative;
+  width: 100%;
+  height: 1.9rem;
+  padding: 0 0.14rem;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+section .shop .del {
+  position: relative;
+  width: 10%;
+  height: 100%;
+  float: left;
+}
+section .shop .del em {
+  position: absolute;
+  display: block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border: 0.01rem solid #ebebeb;
+  border-radius: 50%;
+  top: 50%;
+  left: 0.1rem;
+  transform: translateY(-50%);
+}
+section .shop .del em i {
+  display: block;
+  color: #ea0000;
+  width: 0.3rem;
+  height: 0.3rem;
+  font-size: 0.28rem;
+  margin-top: -0.02rem;
+}
+section .shop > img {
+  float: left;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.2rem 0.2rem 0.2rem 0;
+}
+section .shop a > img {
+  float: left;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.2rem 0.2rem 0.2rem 0;
+}
+section .shop .mes {
+  padding: 0.2rem 0;
+  width: 100%;
+  height: 1.9rem;
+}
+section .shop .mes i {
+  position: absolute;
+  top: 50%;
+  right: 0.14rem;
+  transform: translateY(-50%);
+  color: #adadad;
+  font-size: 0.28rem;
+}
+section .shop .mes h4 {
+  font-size: 0.28rem;
+  font-weight: normal;
+  color: #323232;
+  margin-top: 0.05rem;
+  word-break: break-all;
+}
+section .shop .mes p {
+  font-size: 0.24rem;
+  color: #adadad;
+  margin: 0.1rem 0;
+}
+section .shop .mes .money {
+  position: relative;
+}
+section .shop .mes .money span {
+  color: #ea0000;
+  font-size: 0.28rem;
+}
+section .shop .mes .money img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0.34rem;
+}
+.fade-enter-active {
+  transition: opacity 1s;
+}
+.fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter,
+.fade-leave-to {
+  transition: opacity .3s;
+  opacity: 0;
+}
+.cancel {
+  width: 100%;
+  padding: 0 0.14rem;
+  position: absolute;
+  bottom: 0.2rem;
+}
+.cancel a {
+  display: block;
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  color: #fff;
+  background: #ea0000;
+  font-size: 0.28rem;
+}

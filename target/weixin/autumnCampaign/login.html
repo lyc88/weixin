@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="./css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="./css/style/iconfont.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/src/flexible.js"></script>
+    <script src="./js/src/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>登入</title>
+</head>
+<body>
+    <header>
+        <i class="iconfont icon-llmainpageback"></i>
+    </header>
+    <section>
+        <div class="warp">
+            <img src="./images/tr.png" alt="">
+            <div class="input-container">
+                <i class="iconfont icon-artboard31"></i>
+                <input type="text" id="username" class="username" placeholder="用户名/手机号/泰润会员卡">
+                <i class="iconfont icon-icon"></i>
+            </div>
+            <div class="input-container">
+                <i class="iconfont icon-suo"></i>
+                <input type="password" id="password" class="password"placeholder="请输入密码" style="ime-mode:disabled"
+                       onkeyup="this.value=this.value.replace(/[\u4e00-\u9fa5]/g,'')" >
+                <i class="iconfont icon-eye-close"></i>
+                <i class="iconfont icon-icon"></i>
+            </div>
+            <a href="javascript:void (0)">登入</a>
+            <div class="register-forget">
+                <a href="javascript:void (0)" class="register">立即注册</a>
+                <a href="javascript:void (0)" class="forget">忘记密码？</a>
+            </div>
+            <div class="over-entry">
+                <span>第三方登入</span>
+                <i class="iconfont icon-xinlang"></i>
+                <i class="iconfont icon-qq"></i>
+                <i class="iconfont icon-weixin"></i>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <script type="text/javascript">
+        $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+        /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

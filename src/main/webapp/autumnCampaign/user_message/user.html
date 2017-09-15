@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/DateTimePicker.css" />
+    <link rel="stylesheet" href="../css/user.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script src="../js/src/commom.js"></script>
+    <script type="text/javascript" src="../js/src/DateTimePicker.js"></script>
+    <script src="../js/src/jquery.cookie.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>个人用户</title>
+</head>
+<body>
+    <header>
+        <i class="iconfont icon-llmainpageback"></i>
+        <span>个人中心</span>
+    </header>
+    <section>
+        <div class="touxiang tap-photo">
+            <span></span>
+            <i class="iconfont icon-jiantou"></i>
+        </div>
+        <div class="message">
+            <span></span>
+            <em></em>
+            <i class="iconfont icon-jiantou"></i>
+        </div>
+        <div class="message nickname">
+            <span></span>
+            <em></em>
+            <i class="iconfont icon-jiantou"></i>
+        </div>
+        <div class="message tap-sex">
+            <span></span>
+            <em></em>
+            <i class="iconfont icon-jiantou"></i>
+        </div>
+        <div class="message"  >
+            <span></span>
+            <em></em>
+             <input type="text" data-field="date" class="brithday" readonly>
+            <i class="iconfont icon-jiantou"></i>
+        </div>
+        <div class="message address">
+            <span></span>
+            <em></em>
+            <i class="iconfont icon-jiantou"></i>
+        </div>
+    </section>
+    <!--弹窗口-->
+    <div class="sex-warp">
+        <div class="black"></div>
+        <div class="sex">
+            <a href="javascript:void(0)">男</a>
+            <a href="javascript:void(0)">女</a>
+        </div>
+    </div>
+    <div class="photo-warp">
+        <div class="black"></div>
+        <div class="photo">
+            <a href="javascript:void(0)" class="wire">拍照</a>
+            <a href="javascript:void(0)">从手机相册选择</a>
+            <a href="javascript:void(0)" class="cancel">取消</a>
+        </div>
+    </div>
+    <form  id="myForm" enctype="multipart/form-data">
+        <input type="file" capture="camera" accept="image/*" id="filetest" name="filetest">
+    </form>
+
+
+    <div id="dtBox"></div>
+    <img  id='yes' src="" alt="">
+    <script type="text/javascript">
+
+        $(document).ready(function()
+        {
+            $("#dtBox").DateTimePicker();
+        });
+
+    </script>
+<script type="text/javascript">
+    $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+    /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+    /*．．．*/
+    $youziku.draw();
+</script>
+<script src="./js/user.js"></script>
+</body>
+</html>

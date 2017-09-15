@@ -1,0 +1,202 @@
+@charset "utf-8";
+header {
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding: 0 0.14rem;
+  color: #3c3c3c;
+  font-size: 0.36rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+header i {
+  color: #3c3c3c;
+  font-size: 0.3rem;
+  position: absolute;
+  left: 0.14rem;
+}
+section {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+section .warp {
+  width: 5.9rem;
+  display: block;
+  margin: 0 auto;
+}
+section .warp .input-container {
+  position: relative;
+  margin-top: 0.4rem;
+  height: 0.68rem;
+}
+section .warp p {
+  font-size: 0.28rem;
+  color: #3c3c3c;
+  margin: 0.74rem 0 0.1rem;
+}
+section .warp .input-container label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  line-height: 0.68rem;
+  width: 1.22rem;
+  font-size: 0.28rem;
+  color: #3c3c3c;
+  text-align: left;
+}
+section .warp .input-container .time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  line-height: 0.68rem;
+  width: 1.26rem;
+  font-size: 0.24rem;
+  color: #868686;
+  background: #eeeeee;
+  border-right: 0.01rem solid #eeeeee;
+}
+section .warp .input-container .icon-icon {
+  position: absolute;
+  right: 1.4rem;
+  top: 0.14rem;
+  font-size: 0.34rem;
+  color: #d4d4d4;
+  display: none;
+}
+section .warp .input-container input {
+  width: 4.38rem;
+  height: 100%;
+  line-height: 0.68rem;
+  margin-left: 1.52rem;
+  border: 0.01rem solid #f1f1f1;
+  outline: 0;
+  padding-left: 0.2rem;
+  font-size: 0.24rem;
+  -webkit-appearance: none;
+}
+section .warp .input-container .verify {
+  width: 4.38rem;
+  height: 100%;
+  line-height: 0.68rem;
+  margin-left: 1.52rem;
+  border: 0.01rem solid #f1f1f1;
+  outline: 0;
+  padding-right: 1.8rem;
+}
+section .warp .input-container .active {
+  border: 0.01rem solid #3c3c3c;
+}
+section .warp > a {
+  display: block;
+  height: 0.72rem;
+  line-height: 0.72rem;
+  background: #ea0000;
+  color: #fff;
+  font-size: 0.32rem;
+  margin-top: 0.66rem;
+}
+section .warp .input-container .time-active {
+  border-bottom: 0.01rem solid #868686;
+  border-top: 0.01rem solid #868686;
+  border-right: 0.01rem solid #868686;
+}
+section .warp-one {
+  width: 5.9rem;
+  display: block;
+  margin: 0 auto;
+}
+section .warp-one .input-container {
+  position: relative;
+  margin-top: 0.4rem;
+  height: 0.68rem;
+}
+section .warp-one .input-container input {
+  width: 5.9rem;
+  height: 100%;
+  line-height: 0.68rem;
+  border: 0.01rem solid #f1f1f1;
+  outline: 0;
+  padding-left: 0.6rem;
+  font-size: 0.24rem;
+  -webkit-appearance: none;
+}
+section .warp-one .input-container .icon-shouji,
+section .warp-one .input-container .icon-yaochi {
+  position: absolute;
+  left: 0.14rem;
+  top: 0.14rem;
+  font-size: 0.3rem;
+  color: #d4d4d4;
+}
+section .warp-one .input-container .icon-icon {
+  position: absolute;
+  right: 0.14rem;
+  top: 0.14rem;
+  font-size: 0.34rem;
+  color: #d4d4d4;
+  display: none;
+}
+section .warp-one .input-container .active {
+  border: 0.01rem solid #3c3c3c;
+}
+section .warp-one .input-container .icon-active {
+  color: #3c3c3c;
+}
+section .warp-one .input-container .yanIcon {
+  right: 1.4rem;
+}
+section .warp-one .input-container img {
+  height: 0.65rem;
+  width: 1.3rem;
+  position: absolute;
+  right: 0.01rem;
+  top: 0.02rem;
+}
+section .warp-one > a {
+  display: block;
+  height: 0.72rem;
+  line-height: 0.72rem;
+  background: #ea0000;
+  color: #fff;
+  font-size: 0.32rem;
+  margin-top: 0.66rem;
+}
+section .warp .deal {
+  position: relative;
+  width: 100%;
+  height: 0.4rem;
+  text-align: left;
+  font-size: 0.24rem;
+  color: #3c3c3c;
+  margin-top: 0.3rem;
+}
+section .warp .deal > div {
+  display: inline-block;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  padding-left: 0.6rem;
+}
+section .warp .deal em {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -0.13rem;
+  display: inline-block;
+  width: 0.26rem;
+  height: 0.26rem;
+  border: 0.01rem solid #d4d4d4;
+  text-align: center;
+}
+section .warp .deal a {
+  color: #ea0000;
+}
+section .warp .deal em .icon-gou {
+  display: block;
+  font-size: 0.2rem;
+  color: #ea0000;
+  font-weight: bold;
+  margin-top: -0.03rem;
+}

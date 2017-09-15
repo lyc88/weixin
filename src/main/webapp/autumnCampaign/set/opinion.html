@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/opinion.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script src="../js/src/vue.js"></script>
+    <script src="../js/src/jquery.cookie.js"></script>
+    <script src="../js/src/vue-resource.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>意见反馈</title>
+</head>
+<body>
+   <div class="sec">
+    <header>
+        <i class="iconfont icon-llmainpageback"></i>
+        <span>意见反馈</span>
+    </header>
+    <section>
+        <textarea placeholder="请留下您的反馈和意见" v-model="opinion">{{opinion}}</textarea>
+        <p>最少输入10字，最多输入200个字</p>
+        <div class="phone-w">
+            <label for="phone">手机号码</label>
+            <input type="text" placeholder="请输入手机号码 " v-model="phone">
+        </div>
+        <a href="javascript:void (0)" @click="Put">提交</a>
+    </section>
+   </div>
+    <script type="text/javascript">
+        $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+        /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
+    <script src="./js/opinion.js"></script>
+</body>
+</html>

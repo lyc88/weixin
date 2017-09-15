@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tairun.dao.LsUserDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.tairun.model.LsUserDetail" >
+    <id column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="grade_id" property="gradeId" jdbcType="INTEGER" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+    <result column="real_name" property="realName" jdbcType="VARCHAR" />
+    <result column="user_mail" property="userMail" jdbcType="VARCHAR" />
+    <result column="pay_password" property="payPassword" jdbcType="VARCHAR" />
+    <result column="user_adds" property="userAdds" jdbcType="VARCHAR" />
+    <result column="user_tel" property="userTel" jdbcType="VARCHAR" />
+    <result column="user_mobile" property="userMobile" jdbcType="VARCHAR" />
+    <result column="user_postcode" property="userPostcode" jdbcType="VARCHAR" />
+    <result column="msn" property="msn" jdbcType="VARCHAR" />
+    <result column="qq" property="qq" jdbcType="VARCHAR" />
+    <result column="fax" property="fax" jdbcType="VARCHAR" />
+    <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+    <result column="user_regtime" property="userRegtime" jdbcType="TIMESTAMP" />
+    <result column="user_regip" property="userRegip" jdbcType="VARCHAR" />
+    <result column="user_lasttime" property="userLasttime" jdbcType="TIMESTAMP" />
+    <result column="user_lastip" property="userLastip" jdbcType="VARCHAR" />
+    <result column="user_memo" property="userMemo" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="CHAR" />
+    <result column="birth_date" property="birthDate" jdbcType="CHAR" />
+    <result column="register_code" property="registerCode" jdbcType="VARCHAR" />
+    <result column="score" property="score" jdbcType="INTEGER" />
+    <result column="total_cash" property="totalCash" jdbcType="DECIMAL" />
+    <result column="total_consume" property="totalConsume" jdbcType="DECIMAL" />
+    <result column="addr_id" property="addrId" jdbcType="INTEGER" />
+    <result column="provinceid" property="provinceid" jdbcType="INTEGER" />
+    <result column="cityid" property="cityid" jdbcType="INTEGER" />
+    <result column="areaid" property="areaid" jdbcType="INTEGER" />
+    <result column="id_card" property="idCard" jdbcType="VARCHAR" />
+    <result column="portrait_pic" property="portraitPic" jdbcType="VARCHAR" />
+    <result column="grouth_value" property="grouthValue" jdbcType="INTEGER" />
+    <result column="upgrade_date" property="upgradeDate" jdbcType="TIMESTAMP" />
+    <result column="marry_status" property="marryStatus" jdbcType="INTEGER" />
+    <result column="income_level" property="incomeLevel" jdbcType="INTEGER" />
+    <result column="interest" property="interest" jdbcType="VARCHAR" />
+    <result column="behavior_level" property="behaviorLevel" jdbcType="INTEGER" />
+    <result column="accusation" property="accusation" jdbcType="INTEGER" />
+    <result column="shop_id" property="shopId" jdbcType="INTEGER" />
+    <result column="available_predeposit" property="availablePredeposit" jdbcType="DECIMAL" />
+    <result column="freeze_predeposit" property="freezePredeposit" jdbcType="DECIMAL" />
+    <result column="parent_user_name" property="parentUserName" jdbcType="VARCHAR" />
+    <result column="parent_binding_time" property="parentBindingTime" jdbcType="TIMESTAMP" />
+    <result column="is_reg_im" property="isRegIm" jdbcType="INTEGER" />
+    <result column="trqq_id" property="trqqId" jdbcType="VARCHAR" />
+    <result column="trqq_name" property="trqqName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    user_id, grade_id, user_name, nick_name, real_name, user_mail, pay_password, user_adds, 
+    user_tel, user_mobile, user_postcode, msn, qq, fax, modify_time, user_regtime, user_regip, 
+    user_lasttime, user_lastip, user_memo, sex, birth_date, register_code, score, total_cash, 
+    total_consume, addr_id, provinceid, cityid, areaid, id_card, portrait_pic, grouth_value, 
+    upgrade_date, marry_status, income_level, interest, behavior_level, accusation, shop_id, 
+    available_predeposit, freeze_predeposit, parent_user_name, parent_binding_time, is_reg_im, 
+    trqq_id, trqq_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from ls_usr_detail
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from ls_usr_detail
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.tairun.model.LsUserDetail" >
+    insert into ls_usr_detail (user_id, grade_id, user_name, 
+      nick_name, real_name, user_mail, 
+      pay_password, user_adds, user_tel, 
+      user_mobile, user_postcode, msn, 
+      qq, fax, modify_time, 
+      user_regtime, user_regip, user_lasttime, 
+      user_lastip, user_memo, sex, 
+      birth_date, register_code, score, 
+      total_cash, total_consume, addr_id, 
+      provinceid, cityid, areaid, 
+      id_card, portrait_pic, grouth_value, 
+      upgrade_date, marry_status, income_level, 
+      interest, behavior_level, accusation, 
+      shop_id, available_predeposit, freeze_predeposit, 
+      parent_user_name, parent_binding_time, is_reg_im, 
+      trqq_id, trqq_name)
+    values (#{userId,jdbcType=VARCHAR}, #{gradeId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, 
+      #{nickName,jdbcType=VARCHAR}, #{realName,jdbcType=VARCHAR}, #{userMail,jdbcType=VARCHAR}, 
+      #{payPassword,jdbcType=VARCHAR}, #{userAdds,jdbcType=VARCHAR}, #{userTel,jdbcType=VARCHAR}, 
+      #{userMobile,jdbcType=VARCHAR}, #{userPostcode,jdbcType=VARCHAR}, #{msn,jdbcType=VARCHAR}, 
+      #{qq,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, #{modifyTime,jdbcType=TIMESTAMP}, 
+      #{userRegtime,jdbcType=TIMESTAMP}, #{userRegip,jdbcType=VARCHAR}, #{userLasttime,jdbcType=TIMESTAMP}, 
+      #{userLastip,jdbcType=VARCHAR}, #{userMemo,jdbcType=VARCHAR}, #{sex,jdbcType=CHAR}, 
+      #{birthDate,jdbcType=CHAR}, #{registerCode,jdbcType=VARCHAR}, #{score,jdbcType=INTEGER}, 
+      #{totalCash,jdbcType=DECIMAL}, #{totalConsume,jdbcType=DECIMAL}, #{addrId,jdbcType=INTEGER}, 
+      #{provinceid,jdbcType=INTEGER}, #{cityid,jdbcType=INTEGER}, #{areaid,jdbcType=INTEGER}, 
+      #{idCard,jdbcType=VARCHAR}, #{portraitPic,jdbcType=VARCHAR}, #{grouthValue,jdbcType=INTEGER}, 
+      #{upgradeDate,jdbcType=TIMESTAMP}, #{marryStatus,jdbcType=INTEGER}, #{incomeLevel,jdbcType=INTEGER}, 
+      #{interest,jdbcType=VARCHAR}, #{behaviorLevel,jdbcType=INTEGER}, #{accusation,jdbcType=INTEGER}, 
+      #{shopId,jdbcType=INTEGER}, #{availablePredeposit,jdbcType=DECIMAL}, #{freezePredeposit,jdbcType=DECIMAL}, 
+      #{parentUserName,jdbcType=VARCHAR}, #{parentBindingTime,jdbcType=TIMESTAMP}, #{isRegIm,jdbcType=INTEGER}, 
+      #{trqqId,jdbcType=VARCHAR}, #{trqqName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tairun.model.LsUserDetail" >
+    insert into ls_usr_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="gradeId != null" >
+        grade_id,
+      </if>
+      <if test="userName != null" >
+        user_name,
+      </if>
+      <if test="nickName != null" >
+        nick_name,
+      </if>
+      <if test="realName != null" >
+        real_name,
+      </if>
+      <if test="userMail != null" >
+        user_mail,
+      </if>
+      <if test="payPassword != null" >
+        pay_password,
+      </if>
+      <if test="userAdds != null" >
+        user_adds,
+      </if>
+      <if test="userTel != null" >
+        user_tel,
+      </if>
+      <if test="userMobile != null" >
+        user_mobile,
+      </if>
+      <if test="userPostcode != null" >
+        user_postcode,
+      </if>
+      <if test="msn != null" >
+        msn,
+      </if>
+      <if test="qq != null" >
+        qq,
+      </if>
+      <if test="fax != null" >
+        fax,
+      </if>
+      <if test="modifyTime != null" >
+        modify_time,
+      </if>
+      <if test="userRegtime != null" >
+        user_regtime,
+      </if>
+      <if test="userRegip != null" >
+        user_regip,
+      </if>
+      <if test="userLasttime != null" >
+        user_lasttime,
+      </if>
+      <if test="userLastip != null" >
+        user_lastip,
+      </if>
+      <if test="userMemo != null" >
+        user_memo,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="birthDate != null" >
+        birth_date,
+      </if>
+      <if test="registerCode != null" >
+        register_code,
+      </if>
+      <if test="score != null" >
+        score,
+      </if>
+      <if test="totalCash != null" >
+        total_cash,
+      </if>
+      <if test="totalConsume != null" >
+        total_consume,
+      </if>
+      <if test="addrId != null" >
+        addr_id,
+      </if>
+      <if test="provinceid != null" >
+        provinceid,
+      </if>
+      <if test="cityid != null" >
+        cityid,
+      </if>
+      <if test="areaid != null" >
+        areaid,
+      </if>
+      <if test="idCard != null" >
+        id_card,
+      </if>
+      <if test="portraitPic != null" >
+        portrait_pic,
+      </if>
+      <if test="grouthValue != null" >
+        grouth_value,
+      </if>
+      <if test="upgradeDate != null" >
+        upgrade_date,
+      </if>
+      <if test="marryStatus != null" >
+        marry_status,
+      </if>
+      <if test="incomeLevel != null" >
+        income_level,
+      </if>
+      <if test="interest != null" >
+        interest,
+      </if>
+      <if test="behaviorLevel != null" >
+        behavior_level,
+      </if>
+      <if test="accusation != null" >
+        accusation,
+      </if>
+      <if test="shopId != null" >
+        shop_id,
+      </if>
+      <if test="availablePredeposit != null" >
+        available_predeposit,
+      </if>
+      <if test="freezePredeposit != null" >
+        freeze_predeposit,
+      </if>
+      <if test="parentUserName != null" >
+        parent_user_name,
+      </if>
+      <if test="parentBindingTime != null" >
+        parent_binding_time,
+      </if>
+      <if test="isRegIm != null" >
+        is_reg_im,
+      </if>
+      <if test="trqqId != null" >
+        trqq_id,
+      </if>
+      <if test="trqqName != null" >
+        trqq_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="gradeId != null" >
+        #{gradeId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null" >
+        #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="userMail != null" >
+        #{userMail,jdbcType=VARCHAR},
+      </if>
+      <if test="payPassword != null" >
+        #{payPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userAdds != null" >
+        #{userAdds,jdbcType=VARCHAR},
+      </if>
+      <if test="userTel != null" >
+        #{userTel,jdbcType=VARCHAR},
+      </if>
+      <if test="userMobile != null" >
+        #{userMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="userPostcode != null" >
+        #{userPostcode,jdbcType=VARCHAR},
+      </if>
+      <if test="msn != null" >
+        #{msn,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null" >
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null" >
+        #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null" >
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userRegtime != null" >
+        #{userRegtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userRegip != null" >
+        #{userRegip,jdbcType=VARCHAR},
+      </if>
+      <if test="userLasttime != null" >
+        #{userLasttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userLastip != null" >
+        #{userLastip,jdbcType=VARCHAR},
+      </if>
+      <if test="userMemo != null" >
+        #{userMemo,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=CHAR},
+      </if>
+      <if test="birthDate != null" >
+        #{birthDate,jdbcType=CHAR},
+      </if>
+      <if test="registerCode != null" >
+        #{registerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=INTEGER},
+      </if>
+      <if test="totalCash != null" >
+        #{totalCash,jdbcType=DECIMAL},
+      </if>
+      <if test="totalConsume != null" >
+        #{totalConsume,jdbcType=DECIMAL},
+      </if>
+      <if test="addrId != null" >
+        #{addrId,jdbcType=INTEGER},
+      </if>
+      <if test="provinceid != null" >
+        #{provinceid,jdbcType=INTEGER},
+      </if>
+      <if test="cityid != null" >
+        #{cityid,jdbcType=INTEGER},
+      </if>
+      <if test="areaid != null" >
+        #{areaid,jdbcType=INTEGER},
+      </if>
+      <if test="idCard != null" >
+        #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="portraitPic != null" >
+        #{portraitPic,jdbcType=VARCHAR},
+      </if>
+      <if test="grouthValue != null" >
+        #{grouthValue,jdbcType=INTEGER},
+      </if>
+      <if test="upgradeDate != null" >
+        #{upgradeDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="marryStatus != null" >
+        #{marryStatus,jdbcType=INTEGER},
+      </if>
+      <if test="incomeLevel != null" >
+        #{incomeLevel,jdbcType=INTEGER},
+      </if>
+      <if test="interest != null" >
+        #{interest,jdbcType=VARCHAR},
+      </if>
+      <if test="behaviorLevel != null" >
+        #{behaviorLevel,jdbcType=INTEGER},
+      </if>
+      <if test="accusation != null" >
+        #{accusation,jdbcType=INTEGER},
+      </if>
+      <if test="shopId != null" >
+        #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="availablePredeposit != null" >
+        #{availablePredeposit,jdbcType=DECIMAL},
+      </if>
+      <if test="freezePredeposit != null" >
+        #{freezePredeposit,jdbcType=DECIMAL},
+      </if>
+      <if test="parentUserName != null" >
+        #{parentUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="parentBindingTime != null" >
+        #{parentBindingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isRegIm != null" >
+        #{isRegIm,jdbcType=INTEGER},
+      </if>
+      <if test="trqqId != null" >
+        #{trqqId,jdbcType=VARCHAR},
+      </if>
+      <if test="trqqName != null" >
+        #{trqqName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tairun.model.LsUserDetail" >
+    update ls_usr_detail
+    <set >
+      <if test="gradeId != null" >
+        grade_id = #{gradeId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        nick_name = #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null" >
+        real_name = #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="userMail != null" >
+        user_mail = #{userMail,jdbcType=VARCHAR},
+      </if>
+      <if test="payPassword != null" >
+        pay_password = #{payPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userAdds != null" >
+        user_adds = #{userAdds,jdbcType=VARCHAR},
+      </if>
+      <if test="userTel != null" >
+        user_tel = #{userTel,jdbcType=VARCHAR},
+      </if>
+      <if test="userMobile != null" >
+        user_mobile = #{userMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="userPostcode != null" >
+        user_postcode = #{userPostcode,jdbcType=VARCHAR},
+      </if>
+      <if test="msn != null" >
+        msn = #{msn,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null" >
+        qq = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null" >
+        fax = #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null" >
+        modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userRegtime != null" >
+        user_regtime = #{userRegtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userRegip != null" >
+        user_regip = #{userRegip,jdbcType=VARCHAR},
+      </if>
+      <if test="userLasttime != null" >
+        user_lasttime = #{userLasttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userLastip != null" >
+        user_lastip = #{userLastip,jdbcType=VARCHAR},
+      </if>
+      <if test="userMemo != null" >
+        user_memo = #{userMemo,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=CHAR},
+      </if>
+      <if test="birthDate != null" >
+        birth_date = #{birthDate,jdbcType=CHAR},
+      </if>
+      <if test="registerCode != null" >
+        register_code = #{registerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        score = #{score,jdbcType=INTEGER},
+      </if>
+      <if test="totalCash != null" >
+        total_cash = #{totalCash,jdbcType=DECIMAL},
+      </if>
+      <if test="totalConsume != null" >
+        total_consume = #{totalConsume,jdbcType=DECIMAL},
+      </if>
+      <if test="addrId != null" >
+        addr_id = #{addrId,jdbcType=INTEGER},
+      </if>
+      <if test="provinceid != null" >
+        provinceid = #{provinceid,jdbcType=INTEGER},
+      </if>
+      <if test="cityid != null" >
+        cityid = #{cityid,jdbcType=INTEGER},
+      </if>
+      <if test="areaid != null" >
+        areaid = #{areaid,jdbcType=INTEGER},
+      </if>
+      <if test="idCard != null" >
+        id_card = #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="portraitPic != null" >
+        portrait_pic = #{portraitPic,jdbcType=VARCHAR},
+      </if>
+      <if test="grouthValue != null" >
+        grouth_value = #{grouthValue,jdbcType=INTEGER},
+      </if>
+      <if test="upgradeDate != null" >
+        upgrade_date = #{upgradeDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="marryStatus != null" >
+        marry_status = #{marryStatus,jdbcType=INTEGER},
+      </if>
+      <if test="incomeLevel != null" >
+        income_level = #{incomeLevel,jdbcType=INTEGER},
+      </if>
+      <if test="interest != null" >
+        interest = #{interest,jdbcType=VARCHAR},
+      </if>
+      <if test="behaviorLevel != null" >
+        behavior_level = #{behaviorLevel,jdbcType=INTEGER},
+      </if>
+      <if test="accusation != null" >
+        accusation = #{accusation,jdbcType=INTEGER},
+      </if>
+      <if test="shopId != null" >
+        shop_id = #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="availablePredeposit != null" >
+        available_predeposit = #{availablePredeposit,jdbcType=DECIMAL},
+      </if>
+      <if test="freezePredeposit != null" >
+        freeze_predeposit = #{freezePredeposit,jdbcType=DECIMAL},
+      </if>
+      <if test="parentUserName != null" >
+        parent_user_name = #{parentUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="parentBindingTime != null" >
+        parent_binding_time = #{parentBindingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isRegIm != null" >
+        is_reg_im = #{isRegIm,jdbcType=INTEGER},
+      </if>
+      <if test="trqqId != null" >
+        trqq_id = #{trqqId,jdbcType=VARCHAR},
+      </if>
+      <if test="trqqName != null" >
+        trqq_name = #{trqqName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tairun.model.LsUserDetail" >
+    update ls_usr_detail
+    set grade_id = #{gradeId,jdbcType=INTEGER},
+      user_name = #{userName,jdbcType=VARCHAR},
+      nick_name = #{nickName,jdbcType=VARCHAR},
+      real_name = #{realName,jdbcType=VARCHAR},
+      user_mail = #{userMail,jdbcType=VARCHAR},
+      pay_password = #{payPassword,jdbcType=VARCHAR},
+      user_adds = #{userAdds,jdbcType=VARCHAR},
+      user_tel = #{userTel,jdbcType=VARCHAR},
+      user_mobile = #{userMobile,jdbcType=VARCHAR},
+      user_postcode = #{userPostcode,jdbcType=VARCHAR},
+      msn = #{msn,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=VARCHAR},
+      fax = #{fax,jdbcType=VARCHAR},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      user_regtime = #{userRegtime,jdbcType=TIMESTAMP},
+      user_regip = #{userRegip,jdbcType=VARCHAR},
+      user_lasttime = #{userLasttime,jdbcType=TIMESTAMP},
+      user_lastip = #{userLastip,jdbcType=VARCHAR},
+      user_memo = #{userMemo,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=CHAR},
+      birth_date = #{birthDate,jdbcType=CHAR},
+      register_code = #{registerCode,jdbcType=VARCHAR},
+      score = #{score,jdbcType=INTEGER},
+      total_cash = #{totalCash,jdbcType=DECIMAL},
+      total_consume = #{totalConsume,jdbcType=DECIMAL},
+      addr_id = #{addrId,jdbcType=INTEGER},
+      provinceid = #{provinceid,jdbcType=INTEGER},
+      cityid = #{cityid,jdbcType=INTEGER},
+      areaid = #{areaid,jdbcType=INTEGER},
+      id_card = #{idCard,jdbcType=VARCHAR},
+      portrait_pic = #{portraitPic,jdbcType=VARCHAR},
+      grouth_value = #{grouthValue,jdbcType=INTEGER},
+      upgrade_date = #{upgradeDate,jdbcType=TIMESTAMP},
+      marry_status = #{marryStatus,jdbcType=INTEGER},
+      income_level = #{incomeLevel,jdbcType=INTEGER},
+      interest = #{interest,jdbcType=VARCHAR},
+      behavior_level = #{behaviorLevel,jdbcType=INTEGER},
+      accusation = #{accusation,jdbcType=INTEGER},
+      shop_id = #{shopId,jdbcType=INTEGER},
+      available_predeposit = #{availablePredeposit,jdbcType=DECIMAL},
+      freeze_predeposit = #{freezePredeposit,jdbcType=DECIMAL},
+      parent_user_name = #{parentUserName,jdbcType=VARCHAR},
+      parent_binding_time = #{parentBindingTime,jdbcType=TIMESTAMP},
+      is_reg_im = #{isRegIm,jdbcType=INTEGER},
+      trqq_id = #{trqqId,jdbcType=VARCHAR},
+      trqq_name = #{trqqName,jdbcType=VARCHAR}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+</mapper>

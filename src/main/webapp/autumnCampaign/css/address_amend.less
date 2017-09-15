@@ -1,0 +1,244 @@
+@charset "utf-8";
+@rem:100rem;
+@3c:#3c3c3c;
+
+body{
+  background: #f3f3f3;
+}
+header,section .touxiang,section .message{
+  background: #fff;
+}
+header{
+  height: 96/@rem;
+  line-height: 96/@rem;
+  padding: 0 14/@rem;
+  color: @3c;
+  font-size: 36/@rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1/@rem solid #ebebeb;;
+}
+header i {
+  color: @3c;
+  font-size: 30/@rem;
+  position: absolute;
+  left: 14/@rem;
+}
+.container {
+  width: 100%;
+  height: auto;
+}
+.container>p{
+   height: 80/@rem;
+  line-height: 80/@rem;
+  background: #fff;
+  padding: 0 14/@rem;
+  font-size: 27/@rem;
+  color: #3c3c3c;
+  border-bottom: 1/@rem solid #EBEBEB;
+}
+.container>p>input{
+  outline: 0;
+  border: 0;
+  font-size: 27/@rem;
+  color: #3c3c3c;
+  width: 450/@rem
+}
+.container>p .icon-jiantou{
+  float: right;
+  font-size: 30/@rem;
+  color: #EBEBEB;
+}
+.container > div{
+  position: relative;
+  padding: 30/@rem 14/@rem;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  font-size: 27/@rem;
+  color: #3c3c3c;
+}
+.container > div > span{
+ position: absolute;
+}
+.container>div .Label{
+  margin-left: 70/@rem;
+  width: 300/@rem;
+  height: 100/@rem;
+  display: inline-block;
+  position: relative;
+}
+.container>div .Label span{
+  display: inline-block;
+  width: 88/@rem;
+  height: 40/@rem;
+  line-height: 40/@rem;
+  border: 1/@rem solid #EBEBEB;
+  text-align: center;
+  font-size: 24/@rem;
+  margin-left: 12/@rem;
+  margin-bottom: 10/@rem;
+}
+.container>div .Label .active{
+  color: #389aff;
+  border: 1/@rem solid #389aff;
+}
+
+.container>div .Label>em{
+  font-size: 36/@rem;
+  color: #3c3c3c;
+  margin-left: 20/@rem;
+  font-style: normal;
+}
+.container>div .Label>input
+{
+  display: inline-block;
+  width: 200/@rem;
+  height: 0.4rem;
+  font-size: 0.24rem;
+  padding-left: 0.2rem;
+  outline: 0;
+  border: 0.01rem solid #ebebeb;
+  margin-left: 12/@rem;
+}
+.container>div .Label a {
+  position: absolute;
+  display: inline-block;
+  background: #adadad;
+  color: #fff;
+  font-size: 0.24rem;
+  width: 0.86rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+}
+
+.container>div .Label .Text{
+  display: none;
+}
+.container .label .active {
+  color: #389aff;
+  border: 0.01rem solid #389aff;
+}
+section>a{
+  display: block;
+  width: 96%;
+  height: 80/@rem;
+  line-height:80/@rem;
+  background: #ea0000;
+  color: #fff;
+  text-align: center;
+  font-size:36/@rem ;
+  position: absolute;
+  bottom:0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sendWarp{
+  position: absolute;
+  width: 100%;
+  left:0;
+  bottom:0;
+  height: 650/@rem;
+  transition: all .5s;
+}
+ .sendTo{
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+ .black{
+  position: absolute;
+  background: #000000;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+   opacity: 0.7;
+}
+ .sendTo h4{
+  font-weight: normal;
+  text-align: center;
+  height: 80/@rem;
+  line-height: 80/@rem;
+  font-size: 36/@rem;
+  padding: 0 14/@rem;
+  color: #8d8d8d;
+  border-bottom: 1/@rem solid #d4d4d4;
+}
+ .sendTo h5{
+  font-weight: normal;
+  height: 80/@rem;
+  line-height: 80/@rem;
+  padding: 0 14/@rem;
+  position: relative;
+}
+.sendTo h5 em{
+  color: #3c3c3c;
+  font-size: 24/@rem;
+  font-style: normal;
+  padding: 0 20/@rem;
+}
+.sendTo h5 span{
+  display: inline-block;
+  color: #3c3c3c;
+  font-size: 24/@rem;
+  margin-right: 30/@rem;
+  height: 80/@rem;
+  line-height: 80/@rem;
+}
+.sendTo h5  .choose-red{
+  color: #ea0000;
+  border-bottom: 4/@rem solid #ea0000;
+  transition: .3s all;
+  position: absolute;
+  left:14/@rem;
+  background: #fff;
+}
+
+.sendTo h4 .icon-llmainpageback{
+  float: left;
+  font-size:30/@rem;
+
+}
+.sendTo .icon-icon{
+  position: absolute;
+  font-size:40/@rem;
+  top:20/@rem;
+  right: 12/@rem;
+}
+.sendTo .place{
+  height: 488/@rem;
+  width: 100%;
+  position: relative;
+}
+.sendTo .place p{
+  color: #3c3c3c;
+  font-size: 24/@rem;
+  padding: 0 14/@rem;
+  height: 80/@rem;
+  line-height: 80/@rem;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  border-bottom: 1/@rem solid #d4d4d4;
+}
+.sendTo .place .red {
+  color: #ea0000;
+}
+.Text{
+  display: none;
+}
+.bg-enter-active,.bg-leave-active{
+  transition: opacity .5s
+}
+.bg-enter,.bg-leave-to{
+  opacity: 0;
+}
+.up-enter.active,.up-leave-active{
+
+}
+.up-enter,.up-leave-to{
+  transform: translate3d(0,650/@rem,0);
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/moom_store.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <title>月饼店铺</title>
+    <script>
+        var url = window.location.href
+        var uri = encodeURI(url)
+        console.log(uri)
+        //正则匹配url后面参数
+        function requesturl(attribute) {
+
+            var reg = new RegExp("(^|&)" + attribute + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURI(r[2].toString());
+            return null;
+        }
+        //第三方微信登陆
+         if(url.indexOf("?")!=-1){
+        //todo储存代理商id******
+        var code = requesturl('code')
+        var trSalesUserId = requesturl('userId')
+        console.log('code=' + code)
+        $.ajax({
+            url: 'http://song.85nv.cn/mobile/mooncake/queryOpenIdByCode',
+            type: 'post',
+            async: false,
+            //data:{code:code,state:state},
+            dataType: 'Json',
+            data: {
+                code: code,
+                appId: 'wx2684abab04c7017d'
+            },
+            success: function (res) {
+                console.log(res)
+
+                //获取返回的openId值进行登陆,获取userId用于与自身userId比较鉴别是否为代理商
+                 localStorage.setItem('trOpenId',res.data.openId)
+                 localStorage.setItem('trLoginUserId',res.data.userId)
+                 localStorage.setItem('trSalesUserId',trSalesUserId)
+                var openId = localStorage.getItem('trOpenId')
+                $.ajax({
+                    url: 'http://song.85nv.cn/mobile/user/app/login',
+                    type: 'post',
+                    dataType: 'Json',
+                    async: false,
+                    data: {
+                        openId: openId,
+                        type: 'weixin'
+                    },
+                    success: function (result) {
+                        console.log(result)
+                        if (result.status == 0) {
+                            alert('请使用微信登录')
+                            window.location.href = '../set/phone_amend.html'
+                        } else if (result.status == 1) {
+                            console.log('登录成功')
+                            //js
+                            //授权登陆回调界面
+                            var url = window.location.href
+                            var trLoginUserId = localStorage.getItem('trLoginUserId')
+                            //微信朋友圈分享
+                            $.ajax({
+                                url: 'http://song.85nv.cn/mobile/mooncake/share',
+                                type: 'get',
+                                dataType: 'Json',
+                                data: {
+                                    url: 'http://lyc88.51vip.biz/autumnCampaign/shop_flow/moom_store.html?'+trLoginUserId
+                                },
+                                success: function (res) {
+                                    wx.config({
+                                        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                                        appId: 'wx2684abab04c7017d', // 必填，公众号的唯一标识
+                                        timestamp: res.data.timestamp, // 必填，生成签名的时间戳
+                                        nonceStr: res.data.nonceStr, // 必填，生成签名的随机串
+                                        signature: res.data.signature, // 必填，签名，见附录1
+                                        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                                    });
+                                    wx.ready(function () {
+                                        // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                                        wx.onMenuShareTimeline({
+                                            title: '我的月饼店铺', // 分享标题
+                                            link: url + '?userId=' +
+                                            trLoginUserId, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                            imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504241072918&di=c2bf393ecb059e19f2206197dc4937b7&imgtype=0&src=http%3A%2F%2Fwww.showlive.cn%2Fupload%2Fopus%2F20130917%2F600_3f776e7a-7d0c-42cc-9087-c25039e71277.png', // 分享图标
+                                            success: function () {
+                                                // 用户确认分享后执行的回调函数
+                                                alert('分享成功')
+                                            },
+                                            cancel: function () {
+                                                // 用户取消分享后执行的回调函数
+                                            }
+                                        });
+                                        wx.onMenuShareAppMessage({
+                                            title: '我的月饼店铺', // 分享标题
+                                            desc: '泰润月饼店铺中秋活动', // 分享描述
+                                            link: url + '?userId=' +
+                                            trLoginUserId, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                            imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504241072918&di=c2bf393ecb059e19f2206197dc4937b7&imgtype=0&src=http%3A%2F%2Fwww.showlive.cn%2Fupload%2Fopus%2F20130917%2F600_3f776e7a-7d0c-42cc-9087-c25039e71277.png', // 分享图标
+                                            success: function () {
+                                                // 用户确认分享后执行的回调函数
+                                                alert('分享给朋友成功')
+                                            },
+                                            cancel: function () {
+                                                // 用户取消分享后执行的回调函数
+                                            }
+                                        });
+                                    });
+                                }
+                            })
+                            //分享
+                        } else if (result.status == -2) {
+                            alert('未注册的openId')
+                            window.location.href = '../set/phone_amend.html'
+                        }
+                    }
+                })
+            }
+        })
+         }
+        if (!localStorage.getItem('trOpenId')) {
+            window.location.href =
+                "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2684abab04c7017d&redirect_uri=" + uri +
+                "&response_type=code&scope=snsapi_userinfo&state=1&connect_redirect=1#wechat_redirect"
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <i class="iconfont icon-llmainpageback"></i>
+        <span>月饼店铺</span>
+        <i class="iconfont icon-gengduo"></i>
+        <div class="opa">
+            <div class="wicket">
+                <a href="./search.html"><img src="../images/more_ic_home.png" alt="">泰润月饼</a>
+                <a href="./shop_car.html"><img src="../images/more_ic_shoppingcart.png" alt="">购物车</a>
+                <a href="../dist/myInfo.html"><img src="../images/more_ic_me.png" alt="">我的</a>
+            </div>
+        </div>
+    </header>
+    <div class="user_message">
+        <img src="../images/head.png" alt="">
+        <h1>黄敏丽</h1>
+        <span>店铺分享</span>
+    </div>
+    <section id="myMooncakeStore">
+        <div class="shop">
+            <img src="../images/touxiang.png" alt="">
+            <div class="mes">
+                <h4>CSS属性之渐变属性(gradient) - 但愿人长久 千里共婵娟 - CSDN博客</h4>
+                <div class="money">
+                    价格：
+                    <span>￥{{item.shop_money}}</span>
+                </div>
+                <div class="money">
+                    利润：
+                    <span>￥{{item.shop_money}}</span>
+                </div>
+                <em>分享</em>
+            </div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript">
+        $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+        /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
+
+    <script>
+        $(function () {
+
+        })
+    </script>
+    <script src="./js/moom_store.js"></script>
+</body>
+
+</html>

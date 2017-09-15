@@ -1,0 +1,214 @@
+@charset "utf-8";
+@rem:100rem;
+@3c:#3c3c3c;
+body{background: #EBEBEB}
+header{
+  height: 96/@rem;
+  line-height: 96/@rem;
+  padding: 0 14/@rem;
+  color: @3c;
+  font-size: 36/@rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1/@rem solid #EBEBEB;
+  background: #fff;
+}
+header .icon-llmainpageback {
+  color: @3c;
+  font-size: 30/@rem;
+  position: absolute;
+  left: 14/@rem;
+}
+section{
+  margin-bottom:140/@rem;
+}
+section .one-eva{
+  width: 100%;
+  height: auto;
+  margin-bottom: 20/@rem;
+  padding: 0 14/@rem;
+  background: #fff;
+}
+section .one-eva .top{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-size: 28/@rem;
+}
+section .one-eva .top img{
+  float: left;
+  width: 96/@rem;
+  height: 96/@rem;
+  margin: 20/@rem 0;
+  display: inline;
+  vertical-align: top;
+}
+section .one-eva .top>span{
+  float: left;
+  display: inline-block;
+  height: 96/@rem;
+  line-height: 96/@rem;
+  margin: 20/@rem 10/@rem 20/@rem 20/@rem;
+}
+section .one-eva .top .star{
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+  width: 140/@rem;
+  height: 22/@rem;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+section .one-eva .top .star .star_red{
+  display: block;
+  float: left;
+  height: 22/@rem;
+  width: 22/@rem;
+  margin-right: 6/@rem;
+  background: url('../images/star_red.png');
+  background-size: 100% 100%;
+}
+section .one-eva .top .star .star_white{
+  display: block;
+  float: left;
+  height: 22/@rem;
+  width: 22/@rem;
+  margin-right: 6/@rem;
+  background: url('../images/star_white.png');
+  background-size: 100% 100%;
+}
+section .one-eva  .container{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+section .one-eva  .container>span{
+  position: absolute;
+  right: 6/@rem;
+  bottom:0;
+  font-size: 24/@rem;
+  color: #adadad;
+}
+section .one-eva textarea{
+  display: block;
+  width: 100%;
+  height: 218/@rem;
+  outline: 0;
+  border: 1/@rem solid #adadad;
+  resize: none;
+  padding: 20/@rem;
+  color: #adadad;
+  font-size: 24/@rem;
+}
+section .one-eva .photo{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20/@rem;
+}
+section .one-eva .photo .photos{
+  float: left;
+  height: 100/@rem;
+  width: 100/@rem;
+  margin-right: 26/@rem;
+  border: 1/@rem dotted #adadad;
+  margin-bottom: 20/@rem;
+}
+section .one-eva .photo .photos img{
+  width: 100%;
+  height: 100%;
+}
+section .one-eva .photo .photos-camera{
+  position: relative;
+  float: left;
+  height: 100/@rem;
+  width: 100/@rem;
+  border: 1/@rem dotted #adadad;
+  font-size: 24/@rem;
+  color: #adadad;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 20/@rem;
+}
+section .one-eva .photo .photos-camera i{
+  display: block;
+  color: #adadad;
+  font-size: 60/@rem;
+}
+section .one-eva .photo .photos-camera input{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+  opacity: 0;
+}
+.satisfaction{
+  padding:20/@rem 14/@rem 80/@rem 14/@rem;
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  font-size: 28/@rem;
+  color: @3c;
+  height: 120/@rem;
+}
+.satisfaction .five-star{
+  width: 140/@rem;
+  display: inline-block;
+}
+.satisfaction .five-star .star_red{
+  display: block;
+  float: left;
+  height: 22/@rem;
+  width: 22/@rem;
+  margin-right: 6/@rem;
+  background: url('../images/star_red.png');
+  background-size: 100% 100%;
+}
+.satisfaction>span{
+  font-size: 24/@rem;
+  color: #adadad;
+}
+.satisfaction .icon-dianpu{
+  font-size: 28/@rem;
+}
+
+.star>input{
+  opacity:0;
+  position:absolute;
+  height: 22/@rem;
+  width: 22/@rem;
+  margin-right: 6/@rem;}
+
+.star>input:nth-of-type(1), .star>span:nth-of-type(1){display:none;}
+.star>span{
+  background: url('../images/star_red.png');
+  background-size: 100% 100%;
+  display: block;
+  float: left;
+  height: 22/@rem;
+  width: 22/@rem;
+  margin-right: 6/@rem;
+}
+
+.star>input:checked~span{
+  background: url('../images/star_white.png');
+  background-size: 100% 100%;
+  display: block;
+  float: left;
+  height: 22/@rem;
+  width: 22/@rem;
+  margin-right: 6/@rem;}
+
+.star>input:checked+span{
+  background: url('../images/star_red.png');
+  background-size: 100% 100%;
+  display: block;
+  float: left;
+  height: 22/@rem;
+  width: 22/@rem;
+  margin-right: 6/@rem;
+
+}

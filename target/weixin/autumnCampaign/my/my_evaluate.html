@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/style/Common-moble.css">
+    <link rel="stylesheet" type="text/css" href="../css/style/iconfont.css">
+    <link rel="stylesheet" href="../css/my_evaluate.css">
+    <script src="../js/src/flexible.js"></script>
+    <script src="../js/src/jquery-2.1.1.min.js"></script>
+    <script src="../js/src/vue.js"></script>
+    <script src="../js/src/jquery.cookie.js"></script>
+    <script src="../js/src/vue-resource.js"></script>
+    <script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <title>我的评价</title>
+</head>
+<body>
+    <header>
+        <i class="iconfont icon-llmainpageback"></i>
+        <span>我的评价</span>
+    </header>
+    <section class="sec">
+         <div class="one-eva" v-for="(i,index) in able">
+             <div class="top">
+                 <img src="../images/tr.png" alt="shops">
+                 <span>评分</span>
+                 <div class="star">
+                     <input type="radio" name="b" value="0" v-model="inputdata">
+                     <span></span>
+                     <input type="radio" name="b" value="1" v-model="inputdata">
+                     <span></span>
+                     <input type="radio" name="b" value="2" v-model="inputdata">
+                     <span></span>
+                     <input type="radio" name="b" value="3" v-model="inputdata">
+                     <span></span>
+                     <input type="radio" name="b" value="4" v-model="inputdata">
+                     <span></span>
+                     <input type="radio" name="b" value="5" v-model="inputdata">
+                     <span></span>
+                 </div>
+
+             </div>
+             <div class="container">
+                 <textarea  v-model="able[index].value1" maxlength="128" placeholder="商品与描述相符合吗？(写够15字哦)"></textarea>
+                 <span>  {{able[index].value1.length}}/128</span>
+             </div>
+             <div class="photo">
+                 <div class="photos-camera" >
+                     <i class="iconfont icon-zbbicon0307"></i>
+                     上传照片
+                     <input type="file" capture="camera" accept="image/*" id="filetest" name="filetest" v-on:change="Photo">
+                 </div>
+             </div>
+         </div>
+    </section>
+    <div class="satisfaction">
+       <i class="iconfont icon-dianpu"></i>
+        店铺评分
+        <span>(满意请给5颗星哦)</span>
+        <div class="five-star">
+            <span class="star_red"></span>
+            <span class="star_red"></span>
+            <span class="star_red"></span>
+            <span class="star_red"></span>
+            <span class="star_red"></span>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        $youziku.load("body", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");
+        /*$youziku.load("#id1,.class1,h1", "fd898c6b80054000ae83272ec467e83d", "HiraginoGBW3");*/
+        /*．．．*/
+        $youziku.draw();
+    </script>
+    <script src="./js/my_evaluate.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+@charset "utf-8";
+body {
+  background: #ebebeb;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 2.6rem;
+  text-align: center;
+  background: url('../images/me_back.png');
+  background-size: 100% 100%;
+}
+header .icon-shezhi {
+  position: absolute;
+  top: 0;
+  left: 0.14rem;
+  margin-top: 0.2rem;
+  width: 0.55rem;
+}
+header .icon-xinfeng {
+  position: absolute;
+  top: 0;
+  right: 0.14rem;
+  margin-top: 0.2rem;
+  width: 0.6rem;
+}
+header > div {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header > div .head {
+  width: 1.34rem;
+  height: 1.34rem;
+}
+header > div .head_m {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.5rem;
+}
+header > div p {
+  padding: 0.2rem;
+  font-size: 0.28rem;
+  color: #fff;
+}
+section {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.76rem;
+}
+section .order {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.2rem;
+  background: #fff;
+}
+section .order .order_all {
+  position: relative;
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #3c3c3c;
+  padding: 0 0.14rem;
+  font-size: 0.28rem;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+section .order .order_all .order-check {
+  position: absolute;
+  top: 0;
+  right: 0.14rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.24rem;
+  color: #adadad;
+}
+section .order .order_all .order-check .icon-jiantou {
+  font-size: 0.28rem;
+  margin-left: -0.08rem;
+}
+section .order .order_mes {
+  height: auto;
+  width: 100%;
+}
+section .order .order_mes ul {
+  width: 100%;
+  display: flex;
+}
+section .order .order_mes ul li {
+  flex: 1;
+}
+section .order .order_mes ul li a {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+section .order .order_mes ul li > a > div {
+  width: 100%;
+  height: 0.9rem;
+}
+section .order .order_mes ul li > a > p {
+  text-align: center;
+  font-size: 0.24rem;
+  color: #3c3c3c;
+  padding-bottom: 0.2rem;
+}
+section .order .order_mes ul li img {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section .order .order_mes ul .rili {
+  width: 0.4rem;
+}
+section .order .order_mes ul .car {
+  width: 0.55rem;
+}
+section .order .order_mes ul .fahuo {
+  width: 0.55rem;
+}
+section .order .order_mes ul .fahuo2 {
+  width: 0.55rem;
+}
+section .order .order_mes ul .tuihuo {
+  width: 0.55rem;
+}
+section .wallet {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-bottom: 0.2rem;
+}
+section .wallet .my_wallet {
+  font-size: 0.28rem;
+  color: #3c3c3c;
+  padding: 0 0.14rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+section .wallet .my_wallet_mes {
+  width: 100%;
+  height: auto;
+}
+section .wallet .my_wallet_mes ul {
+  display: flex;
+}
+section .wallet .my_wallet_mes li {
+  flex: 1;
+  text-align: center;
+  padding: 0.1rem 0;
+}
+section .wallet .my_wallet_mes li p,
+section .wallet .my_wallet_mes li div {
+  padding: 0.1rem 0;
+  color: #3c3c3c;
+  font-size: 0.24rem;
+}
+section .other_fun {
+  width: 100%;
+  height: auto;
+}
+section .other_fun .other_one {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.2rem;
+  background: #fff;
+}
+section .other_fun a {
+  position: relative;
+  display: block;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  width: 100%;
+  padding: 0 0.14rem 0 0.6rem;
+  color: #3c3c3c;
+  font-size: 0.28rem;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+section .other_fun a > .one_right {
+  position: absolute;
+  top: 0;
+  right: 0.14rem;
+  color: #adadad;
+  font-size: 0.24rem;
+}
+section .other_fun a > .one_right > i {
+  font-size: 0.28rem;
+}
+section .other_fun .other_one:nth-child(1) a:nth-child(1) {
+  background: url('../images/me_ic_coupon_default.png') no-repeat;
+  background-size: 4.6% 30%;
+  background-position: 0.2rem;
+}
+section .other_fun .other_one:nth-child(1) a:nth-child(2) {
+  background: url('../images/me_ic_footprint_default.png') no-repeat;
+  background-size: 4% 50%;
+  background-position: 0.2rem;
+}
+section .other_fun .other_one:nth-child(1) a:nth-child(3) {
+  background: url('../images/me_ic_attention_default.png') no-repeat;
+  background-size: 4.6% 40%;
+  background-position: 0.2rem;
+}
+section .other_fun .other_one:nth-child(1) a:nth-child(4) {
+  background: url('../images/me_ic_evaluation_default.png') no-repeat;
+  background-size: 4% 46%;
+  background-position: 0.2rem;
+}
+section .other_fun .other_one:nth-child(2) a:nth-child(1) {
+  background: url('../images/me_ic_level_default.png') no-repeat;
+  background-size: 4.6% 30%;
+  background-position: 0.2rem;
+}
+section .other_fun .other_one:nth-child(2) a:nth-child(2) {
+  background: url('../images/me_ic_customerserviceconcern_default.png') no-repeat;
+  background-size: 4.6% 46%;
+  background-position: 0.2rem;
+}
+section .other_fun .other_one:nth-child(2) a:nth-child(3) {
+  background: url('../images/me_ic_aboutus_default.png') no-repeat;
+  background-size: 4.6% 46%;
+  background-position: 0.2rem;
+}
+.choose {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.choose a {
+  flex: 1;
+  background: #fff;
+  height: 0.96rem;
+  text-align: center;
+  padding: 0.1rem 0;
+  color: #646464;
+}
+.choose a .iconfont {
+  font-size: 0.5rem;
+}
+.choose a p {
+  font-size: 0.2rem;
+}
+.choose .active {
+  color: #ea0000;
+}
+.jump {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+}
+.jump .black {
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.5;
+}
+.jump .tellphone {
+  position: absolute;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.jump .tellphone h3 {
+  font-size: 0.32rem;
+  color: #3c3c3c;
+  font-weight: normal;
+  height: 0.8rem;
+  line-height: 0.8rem;
+}
+.jump .tellphone p {
+  font-size: 0.28rem;
+  color: #3c3c3c;
+  height: 0.8rem;
+  line-height: 0.8rem;
+}
+.jump .border {
+  border-bottom: 0.01rem solid #ebebeb;
+}
+.jump .tellphone a {
+  display: block;
+  width: 100%;
+  font-size: 0.28rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #fff;
+  background: #ea0000;
+}
+.bg-enter-active,
+.bg-leave-active {
+  transition: opacity .5s;
+}
+.bg-enter,
+.bg-leave-to {
+  opacity: 0;
+}
+.move-enter-active,
+.move-leave-active {
+  transition: .5s;
+}
+.move-enter,
+.move-leave-to {
+  transform: translateY(-2.42rem);
+}

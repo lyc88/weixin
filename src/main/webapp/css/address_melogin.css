@@ -1,0 +1,208 @@
+@charset "utf-8";
+body {
+  background: #f3f3f3;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.96rem 0;
+}
+header,
+section .touxiang,
+section .message {
+  background: #fff;
+}
+header {
+  width: 100%;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding: 0 0.14rem;
+  color: #3c3c3c;
+  font-size: 0.36rem;
+  text-align: center;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+header i {
+  color: #3c3c3c;
+  font-size: 0.3rem;
+  position: absolute;
+  left: 0.14rem;
+}
+.address-one {
+  background: #fff;
+  width: 100%;
+  height: auto;
+  padding: 0 0.14rem;
+  margin-bottom: 0.2rem;
+}
+.address-one .top span {
+  font-size: 0.32rem;
+  color: #292929;
+  margin-right: 0.2rem;
+}
+.address-one .top {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  position: relative;
+}
+.address-one .top i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  font-size: 0.2rem;
+  color: #389aff;
+  font-style: normal;
+  width: 0.66rem;
+  height: 0.33rem;
+  line-height: 0.33rem;
+  text-align: center;
+  border: 0.01rem solid #389aff;
+  vertical-align: middle;
+}
+.address-one .top .phone {
+  display: inline-block;
+  float: right;
+  color: #292929;
+  font-size: 0.32rem;
+}
+.address-one p {
+  font-size: 0.24rem;
+  color: #adadad;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.01rem solid #ebebeb;
+}
+.address-one .bottom {
+  width: 100%;
+  overflow: hidden;
+  padding: 0.2rem 0;
+}
+.address-one .bottom .left {
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+.address-one .bottom .right {
+  display: inline-block;
+  float: right;
+}
+.address-one .bottom .left span {
+  font-size: 0.24rem;
+  color: #adadad;
+}
+.address-one .bottom .left em {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-radius: 50%;
+  border: 0.01rem solid #ebebeb;
+  background: #fff;
+}
+.address-one .bottom .left .border {
+  border: 0;
+  background: #ea0000;
+}
+.address-one .bottom .left span {
+  margin-left: 0.6rem;
+}
+.address-one .bottom .right a {
+  margin-left: 0.5rem;
+  color: #adadad;
+  font-size: 0.24rem;
+}
+.address-one .bottom .left .icon-gou1 {
+  font-size: 0.3rem;
+  color: #fff;
+  margin-left: 0.03rem;
+}
+.address-one .bottom .right .icon-bianji {
+  font-size: 0.26rem;
+}
+.address-one .bottom .right .icon-lajitong {
+  font-size: 0.3rem;
+}
+.sure0r {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.sure0r .black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0;
+}
+.sure0r .sure {
+  position: absolute;
+  width: 4.6rem;
+  height: 2.6rem;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.sure0r .sure h3 {
+  font-size: 0.28rem;
+  color: #3c3c3c;
+  text-align: center;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-bottom: #EBEBEB;
+}
+.sure0r .sure p {
+  padding: 0.3rem 0;
+  font-size: 0.24rem;
+  color: #3c3c3c;
+  text-align: center;
+}
+.sure0r .sure > div {
+  text-align: center;
+}
+.sure0r .sure > div a {
+  display: inline-block;
+  width: 1.92rem;
+  height: 0.72rem;
+  line-height: 0.72rem;
+  font-size: 0.32rem;
+}
+.sure0r .sure > div .canle-on {
+  background: #fff;
+  color: #ea0000;
+  border: 0.01rem solid #ea0000;
+}
+.sure0r .sure > div .sure-on {
+  background: #ea0000 ;
+  color: #fff;
+  margin-left: 0.1rem;
+  border: 0.01rem solid #ea0000;
+}
+body > a {
+  background: #ea0000;
+  display: block;
+  margin: 0 auto;
+  width: 96%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.32rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .icon-jia {
+  display: inline-block;
+  font-size: 0.3rem;
+  margin-top: -0.04rem;
+}

@@ -1,0 +1,136 @@
+@charset "utf-8";
+header,
+section .touxiang,
+section .message {
+  background: #fff;
+}
+header {
+  position: relative;
+  height: 0.85333333rem;
+  line-height: 0.85333333rem;
+  padding: 0 0.12444444rem;
+  color: #3c3c3c;
+  font-size: 0.32rem;
+  text-align: center;
+  border-bottom: 0.00888889rem solid #ebebeb;
+  z-index: 70;
+}
+header .icon-llmainpageback {
+  color: #3c3c3c;
+  position: absolute;
+  left: 0.12444444rem;
+  font-size: 0.26666667rem;
+}
+header .icon-gengduo {
+  color: #3c3c3c;
+  position: absolute;
+  right: 0.12444444rem;
+  font-size: 0.32rem;
+}
+header .opa {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+header .wicket {
+  width: 1.77777778rem;
+  height: auto;
+  position: absolute;
+  background: #4c4c4c;
+  right: 0.12444444rem;
+  top: 0.85333333rem;
+  display: none;
+}
+header .wicket:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 0.17777778rem;
+  border-style: solid;
+  border-color: transparent  transparent #4c4c4c transparent ;
+  position: absolute;
+  top: -0.35555556rem;
+  right: 0.10666667rem;
+}
+header .wicket a {
+  display: block;
+  width: 1.33333333rem;
+  margin: 0 auto;
+  font-size: 0.24888889rem;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  color: #fff;
+}
+header .wicket a img {
+  width: 0.26666667rem;
+  display: inline-block;
+  vertical-align: center;
+  margin-right: 0.05333333rem;
+}
+header .wicket a:nth-child(1) {
+  border-bottom: 0.00444444rem solid #585858;
+}
+header .wicket a:nth-child(2) {
+  border-bottom: 0.00444444rem solid #585858;
+}
+header .icon-gengduo:hover + .wicket {
+  display: block;
+}
+section {
+  padding: 0.35555556rem;
+  font-size: 0;
+}
+section > div {
+  width: 2.66666667rem;
+  height: 2.66666667rem;
+  background: #d0d0d0;
+  color: #3c3c3c;
+  display: inline-block;
+  margin-right: 0.35555556rem;
+  margin-bottom: 0.35555556rem;
+  text-align: center;
+  vertical-align: text-top;
+  position: relative;
+}
+section > div > a {
+  display: inline-block;
+  color: #3c3c3c;
+  width: 1.77777778rem;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section > div:nth-child(2) > a > img {
+  display: inline-block;
+  width: 0.88888889rem;
+  margin-bottom: 0.26666667rem;
+}
+section > div > a > img:nth-child(1) {
+  display: inline-block;
+  width: 0.71111111rem;
+  margin-bottom: 0.26666667rem;
+}
+section > div > a > img:nth-child(2) {
+  width: 0.71111111rem;
+  margin-bottom: 0.26666667rem;
+  display: none;
+}
+section > div > a > p {
+  font-size: 0.24888889rem;
+}
+section > div:hover {
+  background: #ea0000;
+  color: #fff;
+}
+section > div:hover a > img:nth-child(2) {
+  display: inline-block;
+}
+section > div:hover a > img:nth-child(1) {
+  display: none;
+}

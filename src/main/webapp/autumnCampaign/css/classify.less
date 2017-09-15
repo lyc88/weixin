@@ -1,0 +1,234 @@
+@charset "utf-8";
+@rem:100rem;
+@3c:#3c3c3c;
+::-webkit-scrollbar {width: 0;height: 0;}
+body{  font-family: PingFangSC-Thin, sans-serif;}
+
+header{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 96/@rem;
+  background: #ea0000;
+  z-index: 9999;
+  overflow: visible;
+}
+header .icon-left img,header .icon-right img
+{
+
+  width: 30/@rem;
+  height: 30/@rem;
+}
+header .icon-left {
+  display: block;
+  text-align: center;
+  float: left;
+  width: 40/@rem;
+  height: 100%;
+  vertical-align:middle;
+}
+header .icon-right{
+  display: block;
+  text-align: center;
+  float: right;
+  width: 40/@rem;
+  height: 100%;
+  vertical-align:middle;
+}
+header .icon-left span,header .icon-right span{
+  display:inline-block;
+  height:100%;
+  vertical-align:middle;
+}
+header .centre{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 500/@rem;
+  height: 100%;
+}
+.input1{
+  position: relative;
+  top:50%;
+  transform:translateY(-50%);
+  width: 100%;
+  height: 54/@rem;
+  background: #fff;
+}
+.input1 i {
+  position: absolute;
+  width: 20/@rem;
+  height: 23/@rem;
+  background-size: 100% 100%;
+  top:50%;
+  left: 20/@rem;
+  transform: translateY(-65%);
+  color: #fff;
+  font-size: 28/@rem;
+  z-index: 999;
+}
+
+header input::-webkit-input-placeholder {
+  color:    #fff;
+}
+header input:-moz-placeholder {
+  color:    #fff;
+}
+header input::-moz-placeholder {
+  color:    #fff;
+}
+header input:-ms-input-placeholder {
+  color:    #fff;
+}
+header input{
+  width: 100%;
+  height: 100%;
+  display: block;
+  float: left;
+  border: 0;
+  outline: 0;
+  background: #ea0000;
+  opacity: 0.4;
+  color: #fff;
+  padding-left: 60/@rem;
+  font-size: 24/@rem;
+  letter-spacing: 1/@rem;
+}
+article {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 96/@rem 0;
+
+}
+article nav {
+  float: left;
+  width:22.93%;
+  height: auto;
+}
+article nav a{
+  display: block;
+  width: 100%;
+  height: 80/@rem;
+  line-height: 80/@rem;
+  background:#f3f3f3 ;
+  border-bottom: 1/@rem solid #fff;
+  text-align: center;
+  color: @3c;
+}
+article nav .on{
+  background: #fff;
+  color: #ea0000;
+}
+article .shop{
+  float: left;
+  width: 77.07%;
+  height: auto;
+}
+article .shop .shop-one{
+  width: 100%;
+}
+article .shop .shop-one h4{
+  height: 80/@rem;
+  line-height: 80/@rem;
+  color: @3c;
+    width: 100%;
+  text-align: center;
+}
+article .shop .picture{
+  width: 100%;
+  overflow: hidden;
+}
+article .shop .picture a{
+  display: block;
+  float: left;
+  width: 33.33%;
+  height: auto;
+  text-align: center;
+}
+article .shop .picture a img{
+  display: inline-block;
+  height: 116/@rem;
+  width: 106/@rem;
+}
+article .shop .picture a  h5{
+  color: @3c;
+  font-size: 24/@rem;
+  padding: 19/@rem 0 20/@rem 0;
+  font-weight: normal;
+}
+.none-warp {
+  display: none;
+  width: 300/@rem;
+  height: auto;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.none{
+  width: 248/@rem;
+  height: auto;
+  margin: 0 auto;
+}
+.none>img{
+  width: 100%;
+}
+.none>h3{
+  text-align: center;
+  font-size: 40/@rem;
+  font-style: normal;
+  color: #adadad;
+  margin: 40/@rem 0 20/@rem 0;
+}
+.none>p{
+  font-size: 28/@rem;
+  color: #adadad;
+  text-align: center;
+  margin-bottom: 90/@rem;
+}
+.none>a{
+  display: block;
+  width: 100%;
+  height: 80/@rem;
+  line-height: 80/@rem;
+  text-align: center;
+  color: #fff;
+  font-size: 32/@rem;
+  background: #ea0000;
+}
+.choose{
+  display: flex;
+  background: #fff;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  z-index: 9999;
+  overflow: visible;
+}
+.choose a {
+  flex: 1;
+  background: #fff;
+  height: 96/@rem;
+  text-align: center;
+  padding: 10/@rem 0;
+  color:#646464;
+}
+.choose a .iconfont{
+  font-size:50/@rem;
+
+}
+.choose a p{
+  font-size: 20/@rem;
+
+}
+.choose .active{
+  color: #ea0000;
+}
